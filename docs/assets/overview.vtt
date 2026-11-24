@@ -1,0 +1,150 @@
+WEBVTT
+
+1
+00:00:00.467 --> 00:00:04.924
+RoboRecast: Intent-Preserving Demonstration Augmentation
+
+2
+00:00:05.067 --> 00:00:08.257
+via Diagnosis-Driven Optimization.
+
+3
+00:00:09.800 --> 00:00:13.713
+We begin with the results of our real-world experiments.
+
+4
+00:00:15.267 --> 00:00:18.665
+The first task is to place a cube in a bowl.
+
+5
+00:00:19.067 --> 00:00:24.666
+With 50 real demonstrations, the policy succeeds in 20% of trials.
+
+6
+00:00:26.200 --> 00:00:30.183
+In the centre, we reconstruct the original demonstration.
+
+7
+00:00:30.567 --> 00:00:34.059
+On the right, we change where the cube and bowl start.
+
+8
+00:00:35.733 --> 00:00:39.134
+Now compare the two policies on the real robot.
+
+9
+00:00:40.467 --> 00:00:47.763
+Adding reconstructed and augmented data raises success from 20% to 55%.
+
+10
+00:00:49.933 --> 00:00:53.222
+These training examples can also come from people.
+
+11
+00:00:53.633 --> 00:00:58.696
+Below each demonstration, a simulated arm carries out the same task.
+
+12
+00:00:59.100 --> 00:01:02.634
+Watch how it follows the hand to open the microwave.
+
+13
+00:01:04.367 --> 00:01:07.766
+How do the trained policies perform on the real robot?
+
+14
+00:01:08.767 --> 00:01:13.496
+Across these four trials, the arm stacks, places, pushes and opens.
+
+15
+00:01:17.600 --> 00:01:20.421
+Next, we change what the robot handles.
+
+16
+00:01:20.867 --> 00:01:24.831
+In the top row, it handles a mouse, a controller and a mug.
+
+17
+00:01:25.767 --> 00:01:29.491
+In the bottom row, the tasks carry over to a different arm.
+
+18
+00:01:31.167 --> 00:01:36.070
+We trained these policies entirely on the synthetic data just shown.
+
+19
+00:01:36.467 --> 00:01:39.306
+Here they are running on real robots.
+
+20
+00:01:39.700 --> 00:01:43.089
+The top row shows adaptation to new objects.
+
+21
+00:01:43.500 --> 00:01:47.513
+The bottom row shows adaptation to a different robot arm.
+
+22
+00:01:49.800 --> 00:01:55.388
+Next, we reconstruct and augment several kinds of real-world demonstrations.
+
+23
+00:01:57.133 --> 00:02:00.887
+The original arm places a tomato in a steel bowl.
+
+24
+00:02:01.400 --> 00:02:04.706
+On the right, both the arm and the layout have changed.
+
+25
+00:02:05.400 --> 00:02:08.904
+The new arm lowers a banana onto a blue plate.
+
+26
+00:02:10.600 --> 00:02:14.685
+These examples from DROID involve articulated objects.
+
+27
+00:02:15.100 --> 00:02:19.867
+The drawer slides, the doors swing on hinges, and the tap spout rotates.
+
+28
+00:02:20.267 --> 00:02:24.929
+Each reconstruction follows the motion in the real demonstration.
+
+29
+00:02:26.600 --> 00:02:30.230
+With two arms, the movements have to stay coordinated.
+
+30
+00:02:31.433 --> 00:02:35.892
+On the right, a different pair of arms works around a silver microwave.
+
+31
+00:02:36.433 --> 00:02:40.286
+The arms now place the green cup instead of the blue bowl.
+
+32
+00:02:42.600 --> 00:02:45.476
+The source can even be a pair of human hands.
+
+33
+00:02:47.633 --> 00:02:51.368
+Follow the bowls on the left as the person stacks them.
+
+34
+00:02:52.733 --> 00:02:56.386
+On the right, two robot arms reproduce that sequence.
+
+35
+00:02:58.600 --> 00:03:02.663
+For the final example, the robot itself moves through the scene.
+
+36
+00:03:03.633 --> 00:03:06.460
+Watch the turn as it approaches the chair.
+
+37
+00:03:07.033 --> 00:03:11.417
+Both grippers hold the backrest as the robot pushes the chair in.
+
