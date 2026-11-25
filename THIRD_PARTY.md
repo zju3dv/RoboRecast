@@ -1,0 +1,11 @@
+# Sources and attribution
+
+| Component | Origin and use |
+|---|---|
+| Demonstration frames and video proxy | DROID collaboration, Khazatsky et al., *DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset* (RSS 2024). Episode `IPRL+41a1536a+2023-10-26-23h-24m-37s`, external camera 1. The proxy was resized and sampled for inspection. Selected RGB frames, masks, derived geometry and textures are used in the tutorial. The dataset authors release the data under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [DROID paper](https://autolab.berkeley.edu/assets/publications/media/2024-RSS-DROID.pdf) |
+| Franka arm visuals | The [fetch script](examples/microwave/fetch_arm.py) retrieves ten files from the [DROID robot implementation](https://github.com/droid-dataset/droid/tree/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/robot_ik/franka). Each file is checked against the experimental asset’s SHA-256. Downloaded OBJ and texture files are ignored by Git. |
+| Robotiq 2F-85 | ROS-Industrial assets distributed with [MuJoCo Menagerie](https://github.com/google-deepmind/mujoco_menagerie/tree/eea4c7431b63da8278b0ff31638e0b0e941cec0e/robotiq_2f85). The tutorial uses the Menagerie meshes with renamed local files and two extended pad visuals. The latter retain the upstream triangle ordering and x/y coordinates, with the distal vertices extended 11.8 mm. [Redistribution notice](third_party/notices/mujoco_menagerie.txt) |
+| AgentSTAR | Mazur et al., *Agentic Shape Tracking and Reconstruction from Monocular Videos*. The bundled rendering and pose-search harness, capture reader and conventions come from the version used by RoboRecast. [Upstream](https://github.com/makezur/agenticSTAR) · [MIT license](third_party/agenticSTAR/LICENSE) · [SciPy notice for optimizer routines](third_party/agenticSTAR/harness/views/sweeps/lib/_vendor/SCIPY_LICENSE.txt) |
+| Optional GPU backends | SAM 3, LingBot-Depth and CuACD are installed separately under their upstream terms. The [guide](guides/skills-and-tools.md) links to their repositories and checkpoints. |
+
+The MuJoCo microwave scene, waypoint program and success conditions are adapted from the accepted RoboRecast reconstruction of the source episode. Each candidate uses the same four source interactions.

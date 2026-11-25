@@ -1,0 +1,6 @@
+{
+  "waypoint_offsets": [{
+    "names": ["handle_entry", "contact_align", "close", "pull_mid", "partial_open", "partial_hold"],
+    "offset_m": [-0.075, 0.04, 0]
+  }]
+}

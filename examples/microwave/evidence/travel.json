@@ -1,0 +1,59 @@
+{
+  "settling": {
+    "seconds": 0.4,
+    "maximum_penetration_m": 0.0,
+    "body_drift_m": {
+      "panda_link0": 0.0,
+      "panda_link1": 0.0,
+      "panda_link2": 0.0,
+      "panda_link3": 7.1776730428752605e-06,
+      "panda_link4": 7.413004702073808e-06,
+      "panda_link5": 1.3419731911161896e-05,
+      "panda_link6": 1.3419731911161896e-05,
+      "panda_link7": 1.736519586283192e-05,
+      "panda_link8": 1.465441567772362e-05,
+      "robotiq_arg2f_base_link": 1.465441567772362e-05,
+      "rq_right_driver": 1.4239427772656504e-05,
+      "rq_right_coupler": 1.4307112696960334e-05,
+      "rq_right_spring_link": 1.4205998307385302e-05,
+      "rq_right_follower": 1.4347963633277545e-05,
+      "rq_right_pad": 1.4467782109847029e-05,
+      "rq_right_silicone_pad": 1.4467782109847029e-05,
+      "rq_left_driver": 1.4159714449231199e-05,
+      "rq_left_coupler": 1.4126309197716104e-05,
+      "rq_left_spring_link": 1.4177707456455719e-05,
+      "rq_left_follower": 1.4399255740903593e-05,
+      "rq_left_pad": 1.4554730301098436e-05,
+      "rq_left_silicone_pad": 1.4554730301098436e-05,
+      "work_surface": 0.0,
+      "microwave": 0.0,
+      "microwave__door_hinge": 1.6787007186789338e-05
+    }
+  },
+  "travel": {
+    "joint": "microwave__door_hinge",
+    "axis_local": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "start": 0.008088734235,
+    "directions": [
+      {
+        "limit": 0.0,
+        "first_obstruction": null
+      },
+      {
+        "limit": 1.832595715,
+        "first_obstruction": {
+          "position": 0.7226873017012917,
+          "pair": [
+            "microwave__bottom_trim_collision_0",
+            "microwave__door_rim_collision_5"
+          ],
+          "penetration_m": 0.001062849043224962
+        }
+      }
+    ]
+  }
+}

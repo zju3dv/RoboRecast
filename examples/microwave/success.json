@@ -1,0 +1,25 @@
+{
+  "schema_version": "real2sim-success-spec-v2",
+  "required_checks": [
+    {
+      "type": "finite_state"
+    },
+    {
+      "type": "maximum_penetration",
+      "max_m": 0.005
+    },
+    {
+      "type": "joint_final_range",
+      "joint": "microwave__door_hinge",
+      "min": 0.85,
+      "max": 1.75
+    },
+    {
+      "type": "body_displacement",
+      "body": "microwave",
+      "min_m": 0,
+      "max_m": 0.01
+    }
+  ],
+  "diagnostic_checks": []
+}

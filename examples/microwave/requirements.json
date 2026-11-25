@@ -1,0 +1,103 @@
+{
+  "I": [
+    {
+      "id": "approach_handle",
+      "roles": {
+        "robot": "panda_link8",
+        "target": "microwave__door_hinge"
+      },
+      "predicates": [
+        {
+          "type": "final",
+          "key": "joint:microwave__door_hinge",
+          "min": -0.03,
+          "max": 0.1
+        }
+      ]
+    },
+    {
+      "id": "initial_pull",
+      "roles": {
+        "robot": "finger pads",
+        "target": "microwave__door_hinge"
+      },
+      "after": [
+        "approach_handle"
+      ],
+      "predicates": [
+        {
+          "type": "contact",
+          "key": "contact:left_finger_pad*:microwave__door_handle_collision_*",
+          "min_duration_sec": 0.08
+        },
+        {
+          "type": "contact",
+          "key": "contact:right_finger_pad*:microwave__door_handle_collision_*",
+          "min_duration_sec": 0.08
+        },
+        {
+          "type": "final",
+          "key": "joint:microwave__door_hinge",
+          "min": 0.15,
+          "max": 0.65
+        }
+      ]
+    },
+    {
+      "id": "release",
+      "roles": {
+        "robot": "finger pads",
+        "target": "microwave__door_hinge"
+      },
+      "after": [
+        "initial_pull"
+      ],
+      "predicates": [
+        {
+          "type": "final",
+          "key": "contact:*finger_pad*:microwave__door_handle_collision_*",
+          "max": 0
+        }
+      ]
+    },
+    {
+      "id": "open_wide",
+      "roles": {
+        "robot": "open finger pads",
+        "target": "microwave__door_hinge"
+      },
+      "after": [
+        "release"
+      ],
+      "predicates": [
+        {
+          "type": "contact",
+          "key": "contact:*finger_pad*:microwave__door_handle_collision_*",
+          "min_duration_sec": 0.08
+        },
+        {
+          "type": "final",
+          "key": "joint:microwave__door_hinge",
+          "min": 0.85,
+          "max": 1.75
+        }
+      ]
+    }
+  ],
+  "c": [
+    {
+      "type": "final",
+      "key": "joint:microwave__door_hinge",
+      "min": 0.85,
+      "max": 1.75
+    }
+  ],
+  "G": [
+    {
+      "type": "initial",
+      "key": "joint:microwave__door_hinge",
+      "min": -0.03,
+      "max": 0.05
+    }
+  ]
+}

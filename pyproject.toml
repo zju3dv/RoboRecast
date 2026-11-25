@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roborecast"
+version = "0.1.0"
+description = "Skills and tools for diagnosis-driven demonstration augmentation"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "mujoco==3.13.0", "Pillow>=10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

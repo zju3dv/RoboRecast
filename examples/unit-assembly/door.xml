@@ -1,0 +1,10 @@
+<mujoco>
+  <compiler angle="radian"/>
+  <worldbody>
+    <geom name="housing" type="box" size=".02 .12 .10" pos="0 .16 .10"/>
+    <body name="door" pos="0 .02 .10">
+      <joint name="hinge" type="hinge" axis="0 0 -1" range="0 1.57" damping=".15"/>
+      <geom name="panel" type="box" pos=".10 0 0" size=".10 .008 .09" mass=".24"/>
+    </body>
+  </worldbody>
+</mujoco>

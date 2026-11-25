@@ -1,0 +1,14 @@
+{
+  "time_s": 15.18200000000174,
+  "angle_rad": 0.5352642085844671,
+  "pair": [
+    "microwave__bottom_trim_collision_0",
+    "microwave__door_rim_collision_5"
+  ],
+  "point_world_m": [
+    0.9392933537521095,
+    0.2759468504384237,
+    -0.025338412921934828
+  ],
+  "repaired_pair_clearance_m_at_same_angle": 0.007648526043731197
+}

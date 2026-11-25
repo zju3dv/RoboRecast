@@ -1,0 +1,242 @@
+{
+  "status": "FAIL",
+  "failed_checks": {
+    "interactions": [
+      "initial_pull",
+      "open_wide"
+    ],
+    "rollout_constraints": [
+      "joint:microwave__door_hinge"
+    ],
+    "physics": [
+      "joint_final_range"
+    ]
+  },
+  "rollout_executed": true,
+  "motion": {
+    "status": "PASS",
+    "failed_checks": [],
+    "max_position_error_m": 0.0004994266291685586,
+    "max_angle_error_rad": 0.0009868633039989822,
+    "inside_joint_limits": true,
+    "target_velocity": {
+      "status": "PASS",
+      "limit_rad_s": [
+        2.175,
+        2.175,
+        2.175,
+        2.175,
+        2.61,
+        2.61,
+        2.61
+      ],
+      "peak_rad_s": [
+        0.9361263214247764,
+        0.8629280082914397,
+        0.9775594885613801,
+        0.65223947384046,
+        2.414385493950995,
+        1.2546991610192535,
+        2.5152111053364408
+      ]
+    }
+  },
+  "windows": {
+    "open_wide": [
+      [
+        12.1,
+        17.9
+      ]
+    ],
+    "release": [
+      [
+        11.0,
+        12.1
+      ]
+    ],
+    "initial_pull": [
+      [
+        6.3,
+        11.0
+      ]
+    ],
+    "approach_handle": [
+      [
+        0.43,
+        6.3
+      ]
+    ]
+  },
+  "max_ik_residual": 0.0004994273400827908,
+  "physical_spec": {
+    "schema_version": "real2sim-success-spec-v2",
+    "required_checks": [
+      {
+        "type": "finite_state"
+      },
+      {
+        "type": "maximum_penetration",
+        "max_m": 0.005
+      },
+      {
+        "type": "joint_final_range",
+        "joint": "microwave__door_hinge",
+        "min": 0.85,
+        "max": 1.75
+      },
+      {
+        "type": "body_displacement",
+        "body": "microwave",
+        "min_m": 0,
+        "max_m": 0.01
+      }
+    ],
+    "diagnostic_checks": [],
+    "checks": [
+      {
+        "type": "finite_state"
+      },
+      {
+        "type": "maximum_penetration",
+        "max_m": 0.005
+      },
+      {
+        "type": "joint_final_range",
+        "joint": "microwave__door_hinge",
+        "min": 0.85,
+        "max": 1.75
+      },
+      {
+        "type": "body_displacement",
+        "body": "microwave",
+        "min_m": 0,
+        "max_m": 0.01
+      }
+    ]
+  },
+  "reused_steps": 0,
+  "reused_events": [],
+  "interactions": {
+    "status": "FAIL",
+    "contract_sha256": "b4bb05551b0ff04a16c7820f8df5b0d29e1375c52be1d2eb99c3caed8830a72d",
+    "events": [
+      {
+        "id": "approach_handle",
+        "status": "PASS",
+        "checks": [
+          {
+            "status": "PASS",
+            "key": "joint:microwave__door_hinge",
+            "value": 0.025128004676603654
+          }
+        ]
+      },
+      {
+        "id": "initial_pull",
+        "status": "FAIL",
+        "checks": [
+          {
+            "status": "FAIL",
+            "key": "contact:left_finger_pad*:microwave__door_handle_collision_*",
+            "value": 0.0
+          },
+          {
+            "status": "FAIL",
+            "key": "contact:right_finger_pad*:microwave__door_handle_collision_*",
+            "value": 0.0
+          },
+          {
+            "status": "FAIL",
+            "key": "joint:microwave__door_hinge",
+            "value": 0.037841273505315395
+          }
+        ]
+      },
+      {
+        "id": "release",
+        "status": "PASS",
+        "checks": [
+          {
+            "status": "PASS",
+            "key": "contact:*finger_pad*:microwave__door_handle_collision_*",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "id": "open_wide",
+        "status": "FAIL",
+        "checks": [
+          {
+            "status": "FAIL",
+            "key": "contact:*finger_pad*:microwave__door_handle_collision_*",
+            "value": 0.0
+          },
+          {
+            "status": "FAIL",
+            "key": "joint:microwave__door_hinge",
+            "value": 0.05650292604966222
+          }
+        ]
+      }
+    ],
+    "constraints": {
+      "c": [
+        {
+          "status": "FAIL",
+          "key": "joint:microwave__door_hinge",
+          "value": 0.056508334263725125
+        }
+      ],
+      "G": [
+        {
+          "status": "PASS",
+          "key": "joint:microwave__door_hinge",
+          "value": 0.00809414272151659
+        }
+      ]
+    },
+    "earliest_unmet": "initial_pull"
+  },
+  "physics": {
+    "schema_version": "real2sim-success-metrics-v1",
+    "status": "FAIL",
+    "checks": [
+      {
+        "type": "finite_state",
+        "value": true,
+        "passed": true,
+        "role": "required"
+      },
+      {
+        "type": "maximum_penetration",
+        "value_m": 0.0,
+        "limit_m": 0.005,
+        "passed": true,
+        "role": "required"
+      },
+      {
+        "type": "joint_final_range",
+        "joint": "microwave__door_hinge",
+        "value": 0.056508334263725125,
+        "range": [
+          0.85,
+          1.75
+        ],
+        "passed": false,
+        "role": "required"
+      },
+      {
+        "type": "body_displacement",
+        "body": "microwave",
+        "value_m": 0.0,
+        "range_m": [
+          0.0,
+          0.01
+        ],
+        "passed": true,
+        "role": "required"
+      }
+    ]
+  }
+}

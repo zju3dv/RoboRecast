@@ -1,0 +1,592 @@
+<mujoco model="roborecast_native_scene">
+  <compiler angle="radian" autolimits="true" />
+  <option timestep=".002" gravity="0 0 -9.81" integrator="implicitfast" />
+  <size njmax="4000" nconmax="1000" />
+  <asset>
+    <mesh name="work_surface__countertop_slab_visual" file="assets/work_surface__countertop_slab_visual.obj" />
+    <material name="work_surface__countertop_slab_visual_pbr" rgba="1.0 1.0 1.0 1.0" metallic="0" roughness="0.7799999713897705" texture="work_surface__countertop_slab_visual_pbr_base_color" texuniform="false" />
+    <texture name="work_surface__countertop_slab_visual_pbr_base_color" type="2d" file="assets/work_surface__countertop_slab_visual_pbr_base_color.png" />
+    <mesh name="work_surface__countertop_slab_collision_0" file="assets/work_surface__countertop_slab_collision_0.obj" />
+    <mesh name="microwave__keypad_back_visual" file="assets/microwave__keypad_back_visual.obj" />
+    <material name="microwave__keypad_back_visual_pbr" rgba="0.012000000104308128 0.017000000923871994 0.014999999664723873 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__keypad_back_collision_0" file="assets/microwave__keypad_back_collision_0.obj" />
+    <mesh name="microwave__key_7_2_visual" file="assets/microwave__key_7_2_visual.obj" />
+    <material name="microwave__key_7_2_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_7_2_collision_0" file="assets/microwave__key_7_2_collision_0.obj" />
+    <mesh name="microwave__key_7_1_visual" file="assets/microwave__key_7_1_visual.obj" />
+    <material name="microwave__key_7_1_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_7_1_collision_0" file="assets/microwave__key_7_1_collision_0.obj" />
+    <mesh name="microwave__key_7_0_visual" file="assets/microwave__key_7_0_visual.obj" />
+    <material name="microwave__key_7_0_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_7_0_collision_0" file="assets/microwave__key_7_0_collision_0.obj" />
+    <mesh name="microwave__key_6_2_visual" file="assets/microwave__key_6_2_visual.obj" />
+    <material name="microwave__key_6_2_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_6_2_collision_0" file="assets/microwave__key_6_2_collision_0.obj" />
+    <mesh name="microwave__key_6_1_visual" file="assets/microwave__key_6_1_visual.obj" />
+    <material name="microwave__key_6_1_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_6_1_collision_0" file="assets/microwave__key_6_1_collision_0.obj" />
+    <mesh name="microwave__key_6_0_visual" file="assets/microwave__key_6_0_visual.obj" />
+    <material name="microwave__key_6_0_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_6_0_collision_0" file="assets/microwave__key_6_0_collision_0.obj" />
+    <mesh name="microwave__key_5_2_visual" file="assets/microwave__key_5_2_visual.obj" />
+    <material name="microwave__key_5_2_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_5_2_collision_0" file="assets/microwave__key_5_2_collision_0.obj" />
+    <mesh name="microwave__key_5_1_visual" file="assets/microwave__key_5_1_visual.obj" />
+    <material name="microwave__key_5_1_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_5_1_collision_0" file="assets/microwave__key_5_1_collision_0.obj" />
+    <mesh name="microwave__key_5_0_visual" file="assets/microwave__key_5_0_visual.obj" />
+    <material name="microwave__key_5_0_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_5_0_collision_0" file="assets/microwave__key_5_0_collision_0.obj" />
+    <mesh name="microwave__key_4_2_visual" file="assets/microwave__key_4_2_visual.obj" />
+    <material name="microwave__key_4_2_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_4_2_collision_0" file="assets/microwave__key_4_2_collision_0.obj" />
+    <mesh name="microwave__key_4_1_visual" file="assets/microwave__key_4_1_visual.obj" />
+    <material name="microwave__key_4_1_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_4_1_collision_0" file="assets/microwave__key_4_1_collision_0.obj" />
+    <mesh name="microwave__key_4_0_visual" file="assets/microwave__key_4_0_visual.obj" />
+    <material name="microwave__key_4_0_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_4_0_collision_0" file="assets/microwave__key_4_0_collision_0.obj" />
+    <mesh name="microwave__key_3_2_visual" file="assets/microwave__key_3_2_visual.obj" />
+    <material name="microwave__key_3_2_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_3_2_collision_0" file="assets/microwave__key_3_2_collision_0.obj" />
+    <mesh name="microwave__key_3_1_visual" file="assets/microwave__key_3_1_visual.obj" />
+    <material name="microwave__key_3_1_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_3_1_collision_0" file="assets/microwave__key_3_1_collision_0.obj" />
+    <mesh name="microwave__key_3_0_visual" file="assets/microwave__key_3_0_visual.obj" />
+    <material name="microwave__key_3_0_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_3_0_collision_0" file="assets/microwave__key_3_0_collision_0.obj" />
+    <mesh name="microwave__key_2_2_visual" file="assets/microwave__key_2_2_visual.obj" />
+    <material name="microwave__key_2_2_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_2_2_collision_0" file="assets/microwave__key_2_2_collision_0.obj" />
+    <mesh name="microwave__key_2_1_visual" file="assets/microwave__key_2_1_visual.obj" />
+    <material name="microwave__key_2_1_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_2_1_collision_0" file="assets/microwave__key_2_1_collision_0.obj" />
+    <mesh name="microwave__key_2_0_visual" file="assets/microwave__key_2_0_visual.obj" />
+    <material name="microwave__key_2_0_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_2_0_collision_0" file="assets/microwave__key_2_0_collision_0.obj" />
+    <mesh name="microwave__key_1_2_visual" file="assets/microwave__key_1_2_visual.obj" />
+    <material name="microwave__key_1_2_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_1_2_collision_0" file="assets/microwave__key_1_2_collision_0.obj" />
+    <mesh name="microwave__key_1_1_visual" file="assets/microwave__key_1_1_visual.obj" />
+    <material name="microwave__key_1_1_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_1_1_collision_0" file="assets/microwave__key_1_1_collision_0.obj" />
+    <mesh name="microwave__key_1_0_visual" file="assets/microwave__key_1_0_visual.obj" />
+    <material name="microwave__key_1_0_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_1_0_collision_0" file="assets/microwave__key_1_0_collision_0.obj" />
+    <mesh name="microwave__key_0_2_visual" file="assets/microwave__key_0_2_visual.obj" />
+    <material name="microwave__key_0_2_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_0_2_collision_0" file="assets/microwave__key_0_2_collision_0.obj" />
+    <mesh name="microwave__key_0_1_visual" file="assets/microwave__key_0_1_visual.obj" />
+    <material name="microwave__key_0_1_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_0_1_collision_0" file="assets/microwave__key_0_1_collision_0.obj" />
+    <mesh name="microwave__key_0_0_visual" file="assets/microwave__key_0_0_visual.obj" />
+    <material name="microwave__key_0_0_visual_pbr" rgba="0.3400000035762787 0.3499999940395355 0.3199999928474426 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__key_0_0_collision_0" file="assets/microwave__key_0_0_collision_0.obj" />
+    <mesh name="microwave__housing_visual" file="assets/microwave__housing_visual.obj" />
+    <material name="microwave__housing_visual_pbr" rgba="0.03500000014901161 0.03799999877810478 0.03999999910593033 1.0" metallic="0.3499999940395355" roughness="0.3199999928474426" />
+    <mesh name="microwave__housing_collision_0" file="assets/microwave__housing_collision_0.obj" />
+    <mesh name="microwave__housing_collision_1" file="assets/microwave__housing_collision_1.obj" />
+    <mesh name="microwave__housing_collision_2" file="assets/microwave__housing_collision_2.obj" />
+    <mesh name="microwave__housing_collision_3" file="assets/microwave__housing_collision_3.obj" />
+    <mesh name="microwave__housing_collision_4" file="assets/microwave__housing_collision_4.obj" />
+    <mesh name="microwave__housing_collision_5" file="assets/microwave__housing_collision_5.obj" />
+    <mesh name="microwave__housing_collision_6" file="assets/microwave__housing_collision_6.obj" />
+    <mesh name="microwave__housing_collision_7" file="assets/microwave__housing_collision_7.obj" />
+    <mesh name="microwave__housing_collision_8" file="assets/microwave__housing_collision_8.obj" />
+    <mesh name="microwave__housing_collision_9" file="assets/microwave__housing_collision_9.obj" />
+    <mesh name="microwave__housing_collision_10" file="assets/microwave__housing_collision_10.obj" />
+    <mesh name="microwave__housing_collision_11" file="assets/microwave__housing_collision_11.obj" />
+    <mesh name="microwave__housing_collision_12" file="assets/microwave__housing_collision_12.obj" />
+    <mesh name="microwave__housing_collision_13" file="assets/microwave__housing_collision_13.obj" />
+    <mesh name="microwave__housing_collision_14" file="assets/microwave__housing_collision_14.obj" />
+    <mesh name="microwave__housing_collision_15" file="assets/microwave__housing_collision_15.obj" />
+    <mesh name="microwave__housing_collision_16" file="assets/microwave__housing_collision_16.obj" />
+    <mesh name="microwave__housing_collision_17" file="assets/microwave__housing_collision_17.obj" />
+    <mesh name="microwave__housing_collision_18" file="assets/microwave__housing_collision_18.obj" />
+    <mesh name="microwave__housing_collision_19" file="assets/microwave__housing_collision_19.obj" />
+    <mesh name="microwave__housing_collision_20" file="assets/microwave__housing_collision_20.obj" />
+    <mesh name="microwave__housing_collision_21" file="assets/microwave__housing_collision_21.obj" />
+    <mesh name="microwave__housing_collision_22" file="assets/microwave__housing_collision_22.obj" />
+    <mesh name="microwave__housing_collision_23" file="assets/microwave__housing_collision_23.obj" />
+    <mesh name="microwave__housing_collision_24" file="assets/microwave__housing_collision_24.obj" />
+    <mesh name="microwave__housing_collision_25" file="assets/microwave__housing_collision_25.obj" />
+    <mesh name="microwave__housing_collision_26" file="assets/microwave__housing_collision_26.obj" />
+    <mesh name="microwave__housing_collision_27" file="assets/microwave__housing_collision_27.obj" />
+    <mesh name="microwave__housing_collision_28" file="assets/microwave__housing_collision_28.obj" />
+    <mesh name="microwave__housing_collision_29" file="assets/microwave__housing_collision_29.obj" />
+    <mesh name="microwave__housing_collision_30" file="assets/microwave__housing_collision_30.obj" />
+    <mesh name="microwave__housing_collision_31" file="assets/microwave__housing_collision_31.obj" />
+    <mesh name="microwave__handle_upper_mount_visual" file="assets/microwave__handle_upper_mount_visual.obj" />
+    <material name="microwave__handle_upper_mount_visual_pbr" rgba="0.47999998927116394 0.49000000953674316 0.47999998927116394 1.0" metallic="0.75" roughness="0.3199999928474426" />
+    <mesh name="microwave__handle_upper_mount_collision_0" file="assets/microwave__handle_upper_mount_collision_0.obj" />
+    <mesh name="microwave__handle_lower_mount_visual" file="assets/microwave__handle_lower_mount_visual.obj" />
+    <material name="microwave__handle_lower_mount_visual_pbr" rgba="0.47999998927116394 0.49000000953674316 0.47999998927116394 1.0" metallic="0.75" roughness="0.3199999928474426" />
+    <mesh name="microwave__handle_lower_mount_collision_0" file="assets/microwave__handle_lower_mount_collision_0.obj" />
+    <mesh name="microwave__foot_0.4_0.24_visual" file="assets/microwave__foot_0.4_0.24_visual.obj" />
+    <material name="microwave__foot_0.4_0.24_visual_pbr" rgba="0.017999999225139618 0.017999999225139618 0.017999999225139618 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__foot_0.4_0.24_collision_0" file="assets/microwave__foot_0.4_0.24_collision_0.obj" />
+    <mesh name="microwave__foot_0.4_-0.24_visual" file="assets/microwave__foot_0.4_-0.24_visual.obj" />
+    <material name="microwave__foot_0.4_-0.24_visual_pbr" rgba="0.017999999225139618 0.017999999225139618 0.017999999225139618 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__foot_0.4_-0.24_collision_0" file="assets/microwave__foot_0.4_-0.24_collision_0.obj" />
+    <mesh name="microwave__foot_-0.4_0.24_visual" file="assets/microwave__foot_-0.4_0.24_visual.obj" />
+    <material name="microwave__foot_-0.4_0.24_visual_pbr" rgba="0.017999999225139618 0.017999999225139618 0.017999999225139618 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__foot_-0.4_0.24_collision_0" file="assets/microwave__foot_-0.4_0.24_collision_0.obj" />
+    <mesh name="microwave__foot_-0.4_-0.24_visual" file="assets/microwave__foot_-0.4_-0.24_visual.obj" />
+    <material name="microwave__foot_-0.4_-0.24_visual_pbr" rgba="0.017999999225139618 0.017999999225139618 0.017999999225139618 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__foot_-0.4_-0.24_collision_0" file="assets/microwave__foot_-0.4_-0.24_collision_0.obj" />
+    <mesh name="microwave__fixed_turntable_visual" file="assets/microwave__fixed_turntable_visual.obj" />
+    <material name="microwave__fixed_turntable_visual_pbr" rgba="0.4000000059604645 0.4399999976158142 0.4099999964237213 1.0" metallic="0" roughness="0.23999999463558197" />
+    <mesh name="microwave__fixed_turntable_collision_0" file="assets/microwave__fixed_turntable_collision_0.obj" />
+    <mesh name="microwave__fixed_fascia_visual" file="assets/microwave__fixed_fascia_visual.obj" />
+    <material name="microwave__fixed_fascia_visual_pbr" rgba="0.47999998927116394 0.49000000953674316 0.47999998927116394 1.0" metallic="0.699999988079071" roughness="0.3199999928474426" />
+    <mesh name="microwave__fixed_fascia_collision_0" file="assets/microwave__fixed_fascia_collision_0.obj" />
+    <mesh name="microwave__door_window_visual" file="assets/microwave__door_window_visual.obj" />
+    <material name="microwave__door_window_visual_pbr" rgba="0.027000000700354576 0.032999999821186066 0.03200000151991844 1.0" metallic="0.1599999964237213" roughness="0.3199999928474426" />
+    <mesh name="microwave__door_window_collision_0" file="assets/microwave__door_window_collision_0.obj" />
+    <mesh name="microwave__door_rim_visual" file="assets/microwave__door_rim_visual.obj" />
+    <material name="microwave__door_rim_visual_pbr" rgba="0.47999998927116394 0.49000000953674316 0.47999998927116394 1.0" metallic="0.6499999761581421" roughness="0.3199999928474426" />
+    <mesh name="microwave__door_rim_collision_0" file="assets/microwave__door_rim_collision_0.obj" />
+    <mesh name="microwave__door_rim_collision_1" file="assets/microwave__door_rim_collision_1.obj" />
+    <mesh name="microwave__door_rim_collision_2" file="assets/microwave__door_rim_collision_2.obj" />
+    <mesh name="microwave__door_rim_collision_3" file="assets/microwave__door_rim_collision_3.obj" />
+    <mesh name="microwave__door_rim_collision_4" file="assets/microwave__door_rim_collision_4.obj" />
+    <mesh name="microwave__door_rim_collision_5" file="assets/microwave__door_rim_collision_5.obj" />
+    <mesh name="microwave__door_rim_collision_6" file="assets/microwave__door_rim_collision_6.obj" />
+    <mesh name="microwave__door_rim_collision_7" file="assets/microwave__door_rim_collision_7.obj" />
+    <mesh name="microwave__door_handle_visual" file="assets/microwave__door_handle_visual.obj" />
+    <material name="microwave__door_handle_visual_pbr" rgba="0.47999998927116394 0.49000000953674316 0.47999998927116394 1.0" metallic="0.75" roughness="0.3199999928474426" />
+    <mesh name="microwave__door_handle_collision_0" file="assets/microwave__door_handle_collision_0.obj" />
+    <mesh name="microwave__door_black_border_visual" file="assets/microwave__door_black_border_visual.obj" />
+    <material name="microwave__door_black_border_visual_pbr" rgba="0.00800000037997961 0.009999999776482582 0.008999999612569809 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__door_black_border_collision_0" file="assets/microwave__door_black_border_collision_0.obj" />
+    <mesh name="microwave__door_black_border_collision_1" file="assets/microwave__door_black_border_collision_1.obj" />
+    <mesh name="microwave__door_black_border_collision_2" file="assets/microwave__door_black_border_collision_2.obj" />
+    <mesh name="microwave__door_black_border_collision_3" file="assets/microwave__door_black_border_collision_3.obj" />
+    <mesh name="microwave__door_black_border_collision_4" file="assets/microwave__door_black_border_collision_4.obj" />
+    <mesh name="microwave__door_black_border_collision_5" file="assets/microwave__door_black_border_collision_5.obj" />
+    <mesh name="microwave__door_black_border_collision_6" file="assets/microwave__door_black_border_collision_6.obj" />
+    <mesh name="microwave__display_3_0.012_visual" file="assets/microwave__display_3_0.012_visual.obj" />
+    <material name="microwave__display_3_0.012_visual_pbr" rgba="0.02500000037252903 0.20999999344348907 0.07999999821186066 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__display_3_0.012_collision_0" file="assets/microwave__display_3_0.012_collision_0.obj" />
+    <mesh name="microwave__display_3_-0.012_visual" file="assets/microwave__display_3_-0.012_visual.obj" />
+    <material name="microwave__display_3_-0.012_visual_pbr" rgba="0.02500000037252903 0.20999999344348907 0.07999999821186066 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__display_3_-0.012_collision_0" file="assets/microwave__display_3_-0.012_collision_0.obj" />
+    <mesh name="microwave__display_2_0.012_visual" file="assets/microwave__display_2_0.012_visual.obj" />
+    <material name="microwave__display_2_0.012_visual_pbr" rgba="0.02500000037252903 0.20999999344348907 0.07999999821186066 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__display_2_0.012_collision_0" file="assets/microwave__display_2_0.012_collision_0.obj" />
+    <mesh name="microwave__display_2_-0.012_visual" file="assets/microwave__display_2_-0.012_visual.obj" />
+    <material name="microwave__display_2_-0.012_visual_pbr" rgba="0.02500000037252903 0.20999999344348907 0.07999999821186066 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__display_2_-0.012_collision_0" file="assets/microwave__display_2_-0.012_collision_0.obj" />
+    <mesh name="microwave__display_1_0.012_visual" file="assets/microwave__display_1_0.012_visual.obj" />
+    <material name="microwave__display_1_0.012_visual_pbr" rgba="0.02500000037252903 0.20999999344348907 0.07999999821186066 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__display_1_0.012_collision_0" file="assets/microwave__display_1_0.012_collision_0.obj" />
+    <mesh name="microwave__display_1_-0.012_visual" file="assets/microwave__display_1_-0.012_visual.obj" />
+    <material name="microwave__display_1_-0.012_visual_pbr" rgba="0.02500000037252903 0.20999999344348907 0.07999999821186066 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__display_1_-0.012_collision_0" file="assets/microwave__display_1_-0.012_collision_0.obj" />
+    <mesh name="microwave__display_0_0.012_visual" file="assets/microwave__display_0_0.012_visual.obj" />
+    <material name="microwave__display_0_0.012_visual_pbr" rgba="0.02500000037252903 0.20999999344348907 0.07999999821186066 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__display_0_0.012_collision_0" file="assets/microwave__display_0_0.012_collision_0.obj" />
+    <mesh name="microwave__display_0_-0.012_visual" file="assets/microwave__display_0_-0.012_visual.obj" />
+    <material name="microwave__display_0_-0.012_visual_pbr" rgba="0.02500000037252903 0.20999999344348907 0.07999999821186066 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__display_0_-0.012_collision_0" file="assets/microwave__display_0_-0.012_collision_0.obj" />
+    <mesh name="microwave__display_visual" file="assets/microwave__display_visual.obj" />
+    <material name="microwave__display_visual_pbr" rgba="0.006000000052154064 0.03999999910593033 0.024000000208616257 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__display_collision_0" file="assets/microwave__display_collision_0.obj" />
+    <mesh name="microwave__cavity_right_visual" file="assets/microwave__cavity_right_visual.obj" />
+    <material name="microwave__cavity_right_visual_pbr" rgba="0.6499999761581421 0.6600000262260437 0.6200000047683716 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__cavity_right_collision_0" file="assets/microwave__cavity_right_collision_0.obj" />
+    <mesh name="microwave__cavity_left_visual" file="assets/microwave__cavity_left_visual.obj" />
+    <material name="microwave__cavity_left_visual_pbr" rgba="0.6499999761581421 0.6600000262260437 0.6200000047683716 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__cavity_left_collision_0" file="assets/microwave__cavity_left_collision_0.obj" />
+    <mesh name="microwave__cavity_floor_visual" file="assets/microwave__cavity_floor_visual.obj" />
+    <material name="microwave__cavity_floor_visual_pbr" rgba="0.6499999761581421 0.6600000262260437 0.6200000047683716 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__cavity_floor_collision_0" file="assets/microwave__cavity_floor_collision_0.obj" />
+    <mesh name="microwave__cavity_ceiling_visual" file="assets/microwave__cavity_ceiling_visual.obj" />
+    <material name="microwave__cavity_ceiling_visual_pbr" rgba="0.6499999761581421 0.6600000262260437 0.6200000047683716 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__cavity_ceiling_collision_0" file="assets/microwave__cavity_ceiling_collision_0.obj" />
+    <mesh name="microwave__cavity_back_visual" file="assets/microwave__cavity_back_visual.obj" />
+    <material name="microwave__cavity_back_visual_pbr" rgba="0.6499999761581421 0.6600000262260437 0.6200000047683716 1.0" metallic="0" roughness="0.47999998927116394" />
+    <mesh name="microwave__cavity_back_collision_0" file="assets/microwave__cavity_back_collision_0.obj" />
+    <mesh name="microwave__bottom_trim_visual" file="assets/microwave__bottom_trim_visual.obj" />
+    <material name="microwave__bottom_trim_visual_pbr" rgba="0.47999998927116394 0.49000000953674316 0.47999998927116394 1.0" metallic="0.6000000238418579" roughness="0.3199999928474426" />
+    <mesh name="microwave__bottom_trim_collision_0" file="assets/microwave__bottom_trim_collision_0.obj" />
+    <mesh name="link0" file="assets/link0.obj" />
+    <mesh name="link1" file="assets/link1.obj" />
+    <mesh name="link2" file="assets/link2.obj" />
+    <mesh name="link3" file="assets/link3.obj" />
+    <mesh name="link4" file="assets/link4.obj" />
+    <mesh name="link5" file="assets/link5.obj" />
+    <mesh name="link6" file="assets/link6.obj" />
+    <mesh name="link7" file="assets/link7.obj" />
+    <mesh name="hand" file="assets/hand.obj" />
+    <texture name="panda" file="assets/panda.png" type="2d" />
+    <material name="panda" texture="panda" shininess=".4" specular=".4" />
+    <material name="panda_white" rgba="1 1 1 1" shininess="0.4" specular="0.4" />
+    <material name="rq_metal" rgba="0.58 0.58 0.58 1" />
+    <material name="rq_silicone" rgba="0.1882 0.1882 0.1882 1" />
+    <material name="rq_gray" rgba="0.4627 0.4627 0.4627 1" />
+    <material name="rq_black" rgba="0.149 0.149 0.149 1" />
+    <mesh class="rq_2f85" file="assets/rq_base_mount.stl" name="rq_base_mount" />
+    <mesh class="rq_2f85" file="assets/robotiq_arg2f_base_link.stl" name="robotiq_arg2f_base_link" />
+    <mesh class="rq_2f85" file="assets/rq_driver.stl" name="rq_driver" />
+    <mesh class="rq_2f85" file="assets/rq_coupler.stl" name="rq_coupler" />
+    <mesh class="rq_2f85" file="assets/rq_follower.stl" name="rq_follower" />
+    <mesh class="rq_2f85" file="assets/rq_pad.stl" name="rq_pad" />
+    <mesh class="rq_2f85" file="assets/rq_silicone_pad.stl" name="rq_silicone_pad" />
+    <mesh class="rq_2f85" file="assets/rq_spring_link.stl" name="rq_spring_link" />
+  </asset>
+  <worldbody>
+    <body name="panda_link0" gravcomp="1">
+      <site name="base_site" />
+      <geom type="mesh" material="panda" mesh="link0" />
+      <inertial pos="-4.1018e-02 -1.4e-04 4.9974e-02" mass="6.29769e-01" fullinertia="3.15e-03 3.88e-03 4.285e-03 8.2904e-07 1.5e-04 8.2299e-06" />
+      <body name="panda_link1" pos="0 0 0.333" gravcomp="1">
+        <inertial pos="3.875e-03 2.081e-03 -4.762e-02" mass="4.970684" fullinertia="7.0337e-01 7.0661e-01 9.1170e-03 -1.3900e-04 6.7720e-03 1.9169e-02" />
+        <joint name="panda_joint1" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8973 2.8973" damping="1.5" frictionloss="0.2450" />
+        <geom type="mesh" material="panda_white" mesh="link1" />
+        <body name="panda_link2" pos="0 0 0" quat="0.707107 -0.707107 0 0" gravcomp="1">
+          <inertial pos="-3.141e-03 -2.872e-02 3.495e-03" mass="0.646926" fullinertia="7.9620e-03 2.8110e-02 2.5995e-02 -3.9250e-03 1.0254e-02 7.0400e-04" />
+          <joint name="panda_joint2" pos="0 0 0" axis="0 0 1" limited="true" range="-1.7628 1.7628" damping="1.5" frictionloss="0.1523" />
+          <geom type="mesh" material="panda_white" mesh="link2" />
+          <body name="panda_link3" pos="0 -0.316 0" quat="0.707107 0.707107 0 0" gravcomp="1">
+            <inertial pos="2.7518e-02 3.9252e-02 -6.6502e-02" mass="3.228604" fullinertia="3.7242e-02 3.6155e-02 1.0830e-02 -4.7610e-03 -1.1396e-02 -1.2805e-02" />
+            <joint name="panda_joint3" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8973 2.8973" damping="1.25" frictionloss="0.1827" />
+            <geom type="mesh" material="panda" mesh="link3" />
+            <body name="panda_link4" pos="0.0825 0 0" quat="0.707107 0.707107 0 0" gravcomp="1">
+              <inertial pos="-5.317e-02 1.04419e-01 2.7454e-02" mass="3.587895" fullinertia="2.5853e-02 1.9552e-02 2.8323e-02 7.7960e-03 -1.3320e-03 8.6410e-03" />
+              <joint name="panda_joint4" pos="0 0 0" axis="0 0 1" limited="true" range="-3.0718 -0.0698" damping="1.25" frictionloss="0.3591" />
+              <geom type="mesh" material="panda" mesh="link4" />
+              <body name="panda_link5" pos="-0.0825 0.384 0" quat="0.707107 -0.707107 0 0" gravcomp="1">
+                <inertial pos="1.1953e-02 4.1065e-02 -3.8437e-02" mass="1.225946" fullinertia="3.5549e-02 2.9474e-02 8.6270e-03 -2.1170e-03 -4.0370e-03 2.2900e-04" />
+                <joint name="panda_joint5" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8973 2.8973" damping="0.8" frictionloss="0.2669" />
+                <geom type="mesh" material="panda" mesh="link5" />
+                <body name="panda_link6" pos="0 0 0" quat="0.707107 0.707107 0 0" gravcomp="1">
+                  <inertial pos="6.0149e-02 -1.4117e-02 -1.0517e-02" mass="1.666555 " fullinertia="1.9640e-03 4.3540e-03 5.4330e-03 1.0900e-04 -1.1580e-03 3.4100e-04" />
+                  <joint name="panda_joint6" pos="0 0 0" axis="0 0 1" limited="true" range="-0.0175 3.7525" damping="0.7" frictionloss="0.1658" />
+                  <geom type="mesh" material="panda" mesh="link6" />
+                  <body name="panda_link7" pos="0.088 0 0" quat="0.707107 0.707107 0 0" gravcomp="1">
+                    <inertial pos="1.0517e-02 -4.252e-03 6.1597e-02" mass="7.35522e-01" fullinertia="1.2516e-02 1.0027e-02 4.8150e-03 -4.2800e-04 -1.1960e-03 -7.4100e-04" />
+                    <joint name="panda_joint7" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8973 2.8973" damping="0.7" frictionloss="1.2109" />
+                    <geom type="mesh" material="panda" mesh="link7" />
+                    <body name="panda_link8" pos="0 0 0.107" gravcomp="1">
+                      <site name="ee_site" size=".005" />
+                      <body name="robotiq_arg2f_base_link" childclass="rq_2f85">
+                        <inertial mass="0.777441" pos="0 -2.70394e-05 0.0354675" quat="1 -0.00152849 0 0" diaginertia="0.000260285 0.000225381 0.000152708" />
+                        <geom class="rq_visual" mesh="robotiq_arg2f_base_link" material="rq_black" />
+                        <geom class="rq_collision" mesh="robotiq_arg2f_base_link" />
+                        <body name="rq_right_driver" pos="0 0.0306011 0.054904">
+                          <inertial mass="0.00899563" pos="2.96931e-12 0.0177547 0.00107314" quat="0.681301 0.732003 0 0" diaginertia="1.72352e-06 1.60906e-06 3.22006e-07" />
+                          <joint name="right_finger_joint" class="rq_driver" />
+                          <geom class="rq_visual" mesh="rq_driver" material="rq_gray" />
+                          <geom class="rq_collision" mesh="rq_driver" />
+                          <body name="rq_right_coupler" pos="0 0.0315 -0.0041">
+                            <inertial mass="0.0140974" pos="0 0.00301209 0.0232175" quat="0.705636 -0.0455904 0.0455904 0.705636" diaginertia="4.16206e-06 3.52216e-06 8.88131e-07" />
+                            <joint name="rq_right_coupler_joint" class="rq_coupler" />
+                            <geom class="rq_visual" mesh="rq_coupler" material="rq_black" />
+                            <geom class="rq_collision" mesh="rq_coupler" />
+                          </body>
+                        </body>
+                        <body name="rq_right_spring_link" pos="0 0.0132 0.0609">
+                          <inertial mass="0.0221642" pos="-8.65005e-09 0.0181624 0.0212658" quat="0.663403 -0.244737 0.244737 0.663403" diaginertia="8.96853e-06 6.71733e-06 2.63931e-06" />
+                          <joint name="rq_right_spring_link_joint" class="rq_spring_link" />
+                          <geom class="rq_visual" mesh="rq_spring_link" material="rq_black" />
+                          <geom class="rq_collision" mesh="rq_spring_link" />
+                          <body name="rq_right_follower" pos="0 0.055 0.0375">
+                            <inertial mass="0.0125222" pos="0 -0.011046 0.0124786" quat="1 0.1664 0 0" diaginertia="2.67415e-06 2.4559e-06 6.02031e-07" />
+                            <joint name="right_inner_joint" class="rq_follower" />
+                            <geom class="rq_visual" mesh="rq_follower" material="rq_black" />
+                            <geom class="rq_collision" mesh="rq_follower" />
+                            <body name="rq_right_pad" pos="0 -0.0189 0.01352">
+                              <geom class="rq_pad_box1" name="right_finger_pad" />
+                              <geom class="rq_pad_box2" name="right_finger_pad_lower" />
+                              <inertial mass="0.0035" pos="0 -0.0025 0.0185" quat="0.707107 0 0 0.707107" diaginertia="4.73958e-07 3.64583e-07 1.23958e-07" />
+                              <geom class="rq_visual" mesh="rq_pad" />
+                              <body name="rq_right_silicone_pad">
+                                <geom class="rq_visual" mesh="rq_silicone_pad" material="rq_black" />
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                        <body name="rq_left_driver" pos="0 -0.0306011 0.054904" quat="0 0 0 1">
+                          <inertial mass="0.00899563" pos="0 0.0177547 0.00107314" quat="0.681301 0.732003 0 0" diaginertia="1.72352e-06 1.60906e-06 3.22006e-07" />
+                          <joint name="left_finger_joint" class="rq_driver" />
+                          <geom class="rq_visual" mesh="rq_driver" material="rq_gray" />
+                          <geom class="rq_collision" mesh="rq_driver" />
+                          <body name="rq_left_coupler" pos="0 0.0315 -0.0041">
+                            <inertial mass="0.0140974" pos="0 0.00301209 0.0232175" quat="0.705636 -0.0455904 0.0455904 0.705636" diaginertia="4.16206e-06 3.52216e-06 8.88131e-07" />
+                            <joint name="rq_left_coupler_joint" class="rq_coupler" />
+                            <geom class="rq_visual" mesh="rq_coupler" material="rq_black" />
+                            <geom class="rq_collision" mesh="rq_coupler" />
+                          </body>
+                        </body>
+                        <body name="rq_left_spring_link" pos="0 -0.0132 0.0609" quat="0 0 0 1">
+                          <inertial mass="0.0221642" pos="-8.65005e-09 0.0181624 0.0212658" quat="0.663403 -0.244737 0.244737 0.663403" diaginertia="8.96853e-06 6.71733e-06 2.63931e-06" />
+                          <joint name="rq_left_spring_link_joint" class="rq_spring_link" />
+                          <geom class="rq_visual" mesh="rq_spring_link" material="rq_black" />
+                          <geom class="rq_collision" mesh="rq_spring_link" />
+                          <body name="rq_left_follower" pos="0 0.055 0.0375">
+                            <inertial mass="0.0125222" pos="0 -0.011046 0.0124786" quat="1 0.1664 0 0" diaginertia="2.67415e-06 2.4559e-06 6.02031e-07" />
+                            <joint name="left_inner_joint" class="rq_follower" />
+                            <geom class="rq_visual" mesh="rq_follower" material="rq_black" />
+                            <geom class="rq_collision" mesh="rq_follower" />
+                            <body name="rq_left_pad" pos="0 -0.0189 0.01352">
+                              <geom class="rq_pad_box1" name="left_finger_pad" />
+                              <geom class="rq_pad_box2" name="left_finger_pad_lower" />
+                              <inertial mass="0.0035" pos="0 -0.0025 0.0185" quat="1 0 0 1" diaginertia="4.73958e-07 3.64583e-07 1.23958e-07" />
+                              <geom class="rq_visual" mesh="rq_pad" />
+                              <body name="rq_left_silicone_pad">
+                                <geom class="rq_visual" mesh="rq_silicone_pad" material="rq_black" />
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                      <camera name="wrist" pos="-0.076429994298160595 0.03523372421612804 0.0051637228819867119" quat="-0.11253034181339265 -0.68863264684098435 0.70440459153405499 0.13013904603108978" sensorsize="1 1" resolution="640 360" focalpixel="365.73544311523438 365.73544311523438" principalpixel="-3.3831787109375 1.7516021728515625" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <camera name="ext1" pos="0.27277594298965913 0.43101903565195626 0.44043956029219022" quat="-0.3399132364417119 -0.26880688640703554 0.57874588641997404 0.69083648460676594" sensorsize="1 1" resolution="640 360" focalpixel="261.96853637695312 261.96853637695312" principalpixel="-2.908172607421875 -2.990325927734375" />
+    <camera name="ext2" pos="-0.03554177487323873 -0.34062333124142175 0.34238032285895104" quat="0.54967597552568304 0.62255260617709063 -0.39237333353901815 -0.39538303150170639" sensorsize="1 1" resolution="640 360" focalpixel="261.28128051757812 261.28128051757812" principalpixel="-3.50970458984375 -3.1485137939453125" />
+    <light directional="true" pos="0 0 2" dir="0 0 -1" diffuse=".36 .36 .36" />
+    <body name="work_surface" pos="0.8604978599 -0.1282281596 -0.04527749007" quat="0.8328643572 -0.03329792802 -0.01622682766 0.5522362724">
+      <inertial mass="10.779053162529307" pos="0.01314487188 0.07701374723 -5.088110376e-07" fullinertia="0.4030827851 0.6355081062 1.03639288 0.03660720684 -1.997211834e-07 1.780018858e-06" />
+      <geom name="work_surface__countertop_slab_visual" type="mesh" mesh="work_surface__countertop_slab_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="work_surface__countertop_slab_visual_pbr" />
+      <geom name="work_surface__countertop_slab_collision_0" type="mesh" mesh="work_surface__countertop_slab_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.6 0.01 0.001" condim="3" solref=".005 1" />
+    </body>
+    <body name="microwave" pos="0.9644102438 0.008742296998 0.1066581553" quat="-0.5192289684 -0.01751713101 0.03263759966 0.8538320769">
+      <body name="microwave__door_hinge" pos="-0.23424 -0.168 0">
+        <joint name="microwave__door_hinge" type="hinge" axis="0 0 -1" damping="0.15" range="0 1.832595715" frictionloss="1.0" />
+        <inertial mass="5.431843386717571" pos="0.2129751422 -0.004802544961 -0.0002493521664" fullinertia="0.03306696873 0.1128784008 0.08127567898 0.002565092165 -3.491115757e-05 3.90422955e-06" />
+        <geom name="microwave__handle_upper_mount_visual" type="mesh" mesh="microwave__handle_upper_mount_visual" pos="0.23424 0.168 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__handle_upper_mount_visual_pbr" />
+        <geom name="microwave__handle_upper_mount_collision_0" type="mesh" mesh="microwave__handle_upper_mount_collision_0" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__handle_lower_mount_visual" type="mesh" mesh="microwave__handle_lower_mount_visual" pos="0.23424 0.168 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__handle_lower_mount_visual_pbr" />
+        <geom name="microwave__handle_lower_mount_collision_0" type="mesh" mesh="microwave__handle_lower_mount_collision_0" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_window_visual" type="mesh" mesh="microwave__door_window_visual" pos="0.23424 0.168 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__door_window_visual_pbr" />
+        <geom name="microwave__door_window_collision_0" type="mesh" mesh="microwave__door_window_collision_0" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_rim_visual" type="mesh" mesh="microwave__door_rim_visual" pos="0.23424 0.168 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__door_rim_visual_pbr" />
+        <geom name="microwave__door_rim_collision_0" type="mesh" mesh="microwave__door_rim_collision_0" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_rim_collision_1" type="mesh" mesh="microwave__door_rim_collision_1" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_rim_collision_2" type="mesh" mesh="microwave__door_rim_collision_2" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_rim_collision_3" type="mesh" mesh="microwave__door_rim_collision_3" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_rim_collision_4" type="mesh" mesh="microwave__door_rim_collision_4" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_rim_collision_5" type="mesh" mesh="microwave__door_rim_collision_5" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_rim_collision_6" type="mesh" mesh="microwave__door_rim_collision_6" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_rim_collision_7" type="mesh" mesh="microwave__door_rim_collision_7" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_handle_visual" type="mesh" mesh="microwave__door_handle_visual" pos="0.23424 0.168 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__door_handle_visual_pbr" />
+        <geom name="microwave__door_handle_collision_0" type="mesh" mesh="microwave__door_handle_collision_0" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_black_border_visual" type="mesh" mesh="microwave__door_black_border_visual" pos="0.23424 0.168 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__door_black_border_visual_pbr" />
+        <geom name="microwave__door_black_border_collision_0" type="mesh" mesh="microwave__door_black_border_collision_0" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_black_border_collision_1" type="mesh" mesh="microwave__door_black_border_collision_1" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_black_border_collision_2" type="mesh" mesh="microwave__door_black_border_collision_2" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_black_border_collision_3" type="mesh" mesh="microwave__door_black_border_collision_3" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_black_border_collision_4" type="mesh" mesh="microwave__door_black_border_collision_4" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_black_border_collision_5" type="mesh" mesh="microwave__door_black_border_collision_5" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+        <geom name="microwave__door_black_border_collision_6" type="mesh" mesh="microwave__door_black_border_collision_6" pos="0.23424 0.168 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      </body>
+      <inertial mass="56.67224392679032" pos="0.03920434914 0.02720028572 -0.002318264744" fullinertia="1.038048823 1.892697874 1.966384002 0.120124143 -0.007946765748 -0.008293808496" />
+      <geom name="microwave__keypad_back_visual" type="mesh" mesh="microwave__keypad_back_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__keypad_back_visual_pbr" />
+      <geom name="microwave__keypad_back_collision_0" type="mesh" mesh="microwave__keypad_back_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_7_2_visual" type="mesh" mesh="microwave__key_7_2_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_7_2_visual_pbr" />
+      <geom name="microwave__key_7_2_collision_0" type="mesh" mesh="microwave__key_7_2_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_7_1_visual" type="mesh" mesh="microwave__key_7_1_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_7_1_visual_pbr" />
+      <geom name="microwave__key_7_1_collision_0" type="mesh" mesh="microwave__key_7_1_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_7_0_visual" type="mesh" mesh="microwave__key_7_0_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_7_0_visual_pbr" />
+      <geom name="microwave__key_7_0_collision_0" type="mesh" mesh="microwave__key_7_0_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_6_2_visual" type="mesh" mesh="microwave__key_6_2_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_6_2_visual_pbr" />
+      <geom name="microwave__key_6_2_collision_0" type="mesh" mesh="microwave__key_6_2_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_6_1_visual" type="mesh" mesh="microwave__key_6_1_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_6_1_visual_pbr" />
+      <geom name="microwave__key_6_1_collision_0" type="mesh" mesh="microwave__key_6_1_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_6_0_visual" type="mesh" mesh="microwave__key_6_0_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_6_0_visual_pbr" />
+      <geom name="microwave__key_6_0_collision_0" type="mesh" mesh="microwave__key_6_0_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_5_2_visual" type="mesh" mesh="microwave__key_5_2_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_5_2_visual_pbr" />
+      <geom name="microwave__key_5_2_collision_0" type="mesh" mesh="microwave__key_5_2_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_5_1_visual" type="mesh" mesh="microwave__key_5_1_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_5_1_visual_pbr" />
+      <geom name="microwave__key_5_1_collision_0" type="mesh" mesh="microwave__key_5_1_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_5_0_visual" type="mesh" mesh="microwave__key_5_0_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_5_0_visual_pbr" />
+      <geom name="microwave__key_5_0_collision_0" type="mesh" mesh="microwave__key_5_0_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_4_2_visual" type="mesh" mesh="microwave__key_4_2_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_4_2_visual_pbr" />
+      <geom name="microwave__key_4_2_collision_0" type="mesh" mesh="microwave__key_4_2_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_4_1_visual" type="mesh" mesh="microwave__key_4_1_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_4_1_visual_pbr" />
+      <geom name="microwave__key_4_1_collision_0" type="mesh" mesh="microwave__key_4_1_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_4_0_visual" type="mesh" mesh="microwave__key_4_0_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_4_0_visual_pbr" />
+      <geom name="microwave__key_4_0_collision_0" type="mesh" mesh="microwave__key_4_0_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_3_2_visual" type="mesh" mesh="microwave__key_3_2_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_3_2_visual_pbr" />
+      <geom name="microwave__key_3_2_collision_0" type="mesh" mesh="microwave__key_3_2_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_3_1_visual" type="mesh" mesh="microwave__key_3_1_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_3_1_visual_pbr" />
+      <geom name="microwave__key_3_1_collision_0" type="mesh" mesh="microwave__key_3_1_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_3_0_visual" type="mesh" mesh="microwave__key_3_0_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_3_0_visual_pbr" />
+      <geom name="microwave__key_3_0_collision_0" type="mesh" mesh="microwave__key_3_0_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_2_2_visual" type="mesh" mesh="microwave__key_2_2_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_2_2_visual_pbr" />
+      <geom name="microwave__key_2_2_collision_0" type="mesh" mesh="microwave__key_2_2_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_2_1_visual" type="mesh" mesh="microwave__key_2_1_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_2_1_visual_pbr" />
+      <geom name="microwave__key_2_1_collision_0" type="mesh" mesh="microwave__key_2_1_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_2_0_visual" type="mesh" mesh="microwave__key_2_0_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_2_0_visual_pbr" />
+      <geom name="microwave__key_2_0_collision_0" type="mesh" mesh="microwave__key_2_0_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_1_2_visual" type="mesh" mesh="microwave__key_1_2_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_1_2_visual_pbr" />
+      <geom name="microwave__key_1_2_collision_0" type="mesh" mesh="microwave__key_1_2_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_1_1_visual" type="mesh" mesh="microwave__key_1_1_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_1_1_visual_pbr" />
+      <geom name="microwave__key_1_1_collision_0" type="mesh" mesh="microwave__key_1_1_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_1_0_visual" type="mesh" mesh="microwave__key_1_0_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_1_0_visual_pbr" />
+      <geom name="microwave__key_1_0_collision_0" type="mesh" mesh="microwave__key_1_0_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_0_2_visual" type="mesh" mesh="microwave__key_0_2_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_0_2_visual_pbr" />
+      <geom name="microwave__key_0_2_collision_0" type="mesh" mesh="microwave__key_0_2_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_0_1_visual" type="mesh" mesh="microwave__key_0_1_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_0_1_visual_pbr" />
+      <geom name="microwave__key_0_1_collision_0" type="mesh" mesh="microwave__key_0_1_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__key_0_0_visual" type="mesh" mesh="microwave__key_0_0_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__key_0_0_visual_pbr" />
+      <geom name="microwave__key_0_0_collision_0" type="mesh" mesh="microwave__key_0_0_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_visual" type="mesh" mesh="microwave__housing_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__housing_visual_pbr" />
+      <geom name="microwave__housing_collision_0" type="mesh" mesh="microwave__housing_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_1" type="mesh" mesh="microwave__housing_collision_1" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_2" type="mesh" mesh="microwave__housing_collision_2" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_3" type="mesh" mesh="microwave__housing_collision_3" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_4" type="mesh" mesh="microwave__housing_collision_4" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_5" type="mesh" mesh="microwave__housing_collision_5" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_6" type="mesh" mesh="microwave__housing_collision_6" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_7" type="mesh" mesh="microwave__housing_collision_7" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_8" type="mesh" mesh="microwave__housing_collision_8" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_9" type="mesh" mesh="microwave__housing_collision_9" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_10" type="mesh" mesh="microwave__housing_collision_10" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_11" type="mesh" mesh="microwave__housing_collision_11" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_12" type="mesh" mesh="microwave__housing_collision_12" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_13" type="mesh" mesh="microwave__housing_collision_13" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_14" type="mesh" mesh="microwave__housing_collision_14" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_15" type="mesh" mesh="microwave__housing_collision_15" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_16" type="mesh" mesh="microwave__housing_collision_16" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_17" type="mesh" mesh="microwave__housing_collision_17" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_18" type="mesh" mesh="microwave__housing_collision_18" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_19" type="mesh" mesh="microwave__housing_collision_19" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_20" type="mesh" mesh="microwave__housing_collision_20" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_21" type="mesh" mesh="microwave__housing_collision_21" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_22" type="mesh" mesh="microwave__housing_collision_22" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_23" type="mesh" mesh="microwave__housing_collision_23" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_24" type="mesh" mesh="microwave__housing_collision_24" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_25" type="mesh" mesh="microwave__housing_collision_25" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_26" type="mesh" mesh="microwave__housing_collision_26" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_27" type="mesh" mesh="microwave__housing_collision_27" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_28" type="mesh" mesh="microwave__housing_collision_28" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_29" type="mesh" mesh="microwave__housing_collision_29" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_30" type="mesh" mesh="microwave__housing_collision_30" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__housing_collision_31" type="mesh" mesh="microwave__housing_collision_31" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__foot_0.4_0.24_visual" type="mesh" mesh="microwave__foot_0.4_0.24_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__foot_0.4_0.24_visual_pbr" />
+      <geom name="microwave__foot_0.4_0.24_collision_0" type="mesh" mesh="microwave__foot_0.4_0.24_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__foot_0.4_-0.24_visual" type="mesh" mesh="microwave__foot_0.4_-0.24_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__foot_0.4_-0.24_visual_pbr" />
+      <geom name="microwave__foot_0.4_-0.24_collision_0" type="mesh" mesh="microwave__foot_0.4_-0.24_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__foot_-0.4_0.24_visual" type="mesh" mesh="microwave__foot_-0.4_0.24_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__foot_-0.4_0.24_visual_pbr" />
+      <geom name="microwave__foot_-0.4_0.24_collision_0" type="mesh" mesh="microwave__foot_-0.4_0.24_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__foot_-0.4_-0.24_visual" type="mesh" mesh="microwave__foot_-0.4_-0.24_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__foot_-0.4_-0.24_visual_pbr" />
+      <geom name="microwave__foot_-0.4_-0.24_collision_0" type="mesh" mesh="microwave__foot_-0.4_-0.24_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__fixed_turntable_visual" type="mesh" mesh="microwave__fixed_turntable_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__fixed_turntable_visual_pbr" />
+      <geom name="microwave__fixed_turntable_collision_0" type="mesh" mesh="microwave__fixed_turntable_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__fixed_fascia_visual" type="mesh" mesh="microwave__fixed_fascia_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__fixed_fascia_visual_pbr" />
+      <geom name="microwave__fixed_fascia_collision_0" type="mesh" mesh="microwave__fixed_fascia_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__display_3_0.012_visual" type="mesh" mesh="microwave__display_3_0.012_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__display_3_0.012_visual_pbr" />
+      <geom name="microwave__display_3_0.012_collision_0" type="mesh" mesh="microwave__display_3_0.012_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__display_3_-0.012_visual" type="mesh" mesh="microwave__display_3_-0.012_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__display_3_-0.012_visual_pbr" />
+      <geom name="microwave__display_3_-0.012_collision_0" type="mesh" mesh="microwave__display_3_-0.012_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__display_2_0.012_visual" type="mesh" mesh="microwave__display_2_0.012_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__display_2_0.012_visual_pbr" />
+      <geom name="microwave__display_2_0.012_collision_0" type="mesh" mesh="microwave__display_2_0.012_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__display_2_-0.012_visual" type="mesh" mesh="microwave__display_2_-0.012_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__display_2_-0.012_visual_pbr" />
+      <geom name="microwave__display_2_-0.012_collision_0" type="mesh" mesh="microwave__display_2_-0.012_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__display_1_0.012_visual" type="mesh" mesh="microwave__display_1_0.012_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__display_1_0.012_visual_pbr" />
+      <geom name="microwave__display_1_0.012_collision_0" type="mesh" mesh="microwave__display_1_0.012_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__display_1_-0.012_visual" type="mesh" mesh="microwave__display_1_-0.012_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__display_1_-0.012_visual_pbr" />
+      <geom name="microwave__display_1_-0.012_collision_0" type="mesh" mesh="microwave__display_1_-0.012_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__display_0_0.012_visual" type="mesh" mesh="microwave__display_0_0.012_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__display_0_0.012_visual_pbr" />
+      <geom name="microwave__display_0_0.012_collision_0" type="mesh" mesh="microwave__display_0_0.012_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__display_0_-0.012_visual" type="mesh" mesh="microwave__display_0_-0.012_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__display_0_-0.012_visual_pbr" />
+      <geom name="microwave__display_0_-0.012_collision_0" type="mesh" mesh="microwave__display_0_-0.012_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__display_visual" type="mesh" mesh="microwave__display_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__display_visual_pbr" />
+      <geom name="microwave__display_collision_0" type="mesh" mesh="microwave__display_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__cavity_right_visual" type="mesh" mesh="microwave__cavity_right_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__cavity_right_visual_pbr" />
+      <geom name="microwave__cavity_right_collision_0" type="mesh" mesh="microwave__cavity_right_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__cavity_left_visual" type="mesh" mesh="microwave__cavity_left_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__cavity_left_visual_pbr" />
+      <geom name="microwave__cavity_left_collision_0" type="mesh" mesh="microwave__cavity_left_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__cavity_floor_visual" type="mesh" mesh="microwave__cavity_floor_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__cavity_floor_visual_pbr" />
+      <geom name="microwave__cavity_floor_collision_0" type="mesh" mesh="microwave__cavity_floor_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__cavity_ceiling_visual" type="mesh" mesh="microwave__cavity_ceiling_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__cavity_ceiling_visual_pbr" />
+      <geom name="microwave__cavity_ceiling_collision_0" type="mesh" mesh="microwave__cavity_ceiling_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__cavity_back_visual" type="mesh" mesh="microwave__cavity_back_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__cavity_back_visual_pbr" />
+      <geom name="microwave__cavity_back_collision_0" type="mesh" mesh="microwave__cavity_back_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+      <geom name="microwave__bottom_trim_visual" type="mesh" mesh="microwave__bottom_trim_visual" pos="-0 -0 -0" mass="0" contype="0" conaffinity="0" group="2" material="microwave__bottom_trim_visual_pbr" />
+      <geom name="microwave__bottom_trim_collision_0" type="mesh" mesh="microwave__bottom_trim_collision_0" pos="-0 -0 -0" mass="0" group="3" rgba="0 1 0 .2" friction="0.4 0.008 0.0005" condim="3" solref=".005 1" />
+    </body>
+  </worldbody>
+  <visual>
+    <headlight ambient=".54 .54 .54" />
+  </visual>
+  <default>
+    <velocity kv="10" ctrllimited="true" ctrlrange="-3.1415928 3.1415928" forcelimited="true" />
+    <geom solref="0.002 1" solimp="0.95 0.99 0.001" conaffinity="1" friction="1.0 0.1 0.001" contype="1" condim="6" />
+    <default class="rq_2f85">
+      <mesh scale="0.001 0.001 0.001" />
+      <general biastype="affine" />
+      <joint axis="1 0 0" />
+      <default class="rq_driver">
+        <joint range="0 0.8" armature="0.005" damping="0.1" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1" />
+      </default>
+      <default class="rq_follower">
+        <joint range="-0.872664 0.872664" armature="0.001" pos="0 -0.018 0.0065" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1" />
+      </default>
+      <default class="rq_spring_link">
+        <joint range="-0.29670597283 0.8" armature="0.001" stiffness="0.05" springref="2.62" damping="0.00125" />
+      </default>
+      <default class="rq_coupler">
+        <joint range="-1.57 0" armature="0.001" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1" />
+      </default>
+      <default class="rq_visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="rq_collision">
+        <geom type="mesh" group="3" />
+        <default class="rq_pad_box1">
+          <geom mass="0" type="box" pos="0 -0.0026 0.034025" size="0.011 0.004 0.015274999999999999" friction="0.7" solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.55 0.55 0.55 1" />
+        </default>
+        <default class="rq_pad_box2">
+          <geom mass="0" type="box" pos="0 -0.0026 0.009375" size="0.011 0.004 0.009375" friction="0.6" solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.45 0.45 0.45 1" />
+        </default>
+      </default>
+    </default>
+  </default>
+  <contact>
+    <exclude body1="robotiq_arg2f_base_link" body2="rq_left_driver" />
+    <exclude body1="robotiq_arg2f_base_link" body2="rq_right_driver" />
+    <exclude body1="robotiq_arg2f_base_link" body2="rq_left_spring_link" />
+    <exclude body1="robotiq_arg2f_base_link" body2="rq_right_spring_link" />
+    <exclude body1="rq_right_coupler" body2="rq_right_follower" />
+    <exclude body1="rq_left_coupler" body2="rq_left_follower" />
+  </contact>
+  <actuator>
+    <position joint="panda_joint1" forcerange="-20.0 20.0" forcelimited="true" name="arm_position1" kp="300.0" />
+    <position joint="panda_joint2" forcerange="-20.0 20.0" forcelimited="true" name="arm_position2" kp="300.0" />
+    <position joint="panda_joint3" forcerange="-18.0 18.0" forcelimited="true" name="arm_position3" kp="250.0" />
+    <position joint="panda_joint4" forcerange="-18.0 18.0" forcelimited="true" name="arm_position4" kp="250.0" />
+    <position joint="panda_joint5" forcerange="-6.0 6.0" forcelimited="true" name="arm_position5" kp="120.0" />
+    <position joint="panda_joint6" forcerange="-6.0 6.0" forcelimited="true" name="arm_position6" kp="100.0" />
+    <position joint="panda_joint7" forcerange="-6.0 6.0" forcelimited="true" name="arm_position7" kp="80.0" />
+    <velocity joint="panda_joint1" forcerange="-87.0 87.0" forcelimited="true" name="arm_velocity1" kv="35.0" />
+    <velocity joint="panda_joint2" forcerange="-87.0 87.0" forcelimited="true" name="arm_velocity2" kv="35.0" />
+    <velocity joint="panda_joint3" forcerange="-87.0 87.0" forcelimited="true" name="arm_velocity3" kv="30.0" />
+    <velocity joint="panda_joint4" forcerange="-87.0 87.0" forcelimited="true" name="arm_velocity4" kv="25.0" />
+    <velocity joint="panda_joint5" forcerange="-12.0 12.0" forcelimited="true" name="arm_velocity5" kv="15.0" />
+    <velocity joint="panda_joint6" forcerange="-12.0 12.0" forcelimited="true" name="arm_velocity6" kv="12.0" />
+    <velocity joint="panda_joint7" forcerange="-12.0 12.0" forcelimited="true" name="arm_velocity7" kv="10.0" />
+    <general name="gripper_position" tendon="rq_split" biastype="affine" gainprm="100 0 0" biasprm="0 -100 -10" ctrlrange="0 .8" forcerange="-5 5" />
+  </actuator>
+  <equality>
+    <connect anchor="0 0 0" body1="rq_right_follower" body2="rq_right_coupler" solimp="0.95 0.99 0.001" solref="0.005 1" />
+    <connect anchor="0 0 0" body1="rq_left_follower" body2="rq_left_coupler" solimp="0.95 0.99 0.001" solref="0.005 1" />
+    <joint joint1="right_finger_joint" joint2="left_finger_joint" polycoef="0 1 0 0 0" solimp="0.95 0.99 0.001" solref="0.005 1" />
+  </equality>
+  <tendon>
+    <fixed name="rq_split">
+      <joint joint="right_finger_joint" coef="0.5" />
+      <joint joint="left_finger_joint" coef="0.5" />
+    </fixed>
+  </tendon>
+<keyframe><key name="settled_initial" qpos="-0.2256707563 -0.7290689032 -0.1697348924 -2.355378273 -0.3465180445 1.503081781 -0.06815575966 0.00292558868 0.0001589523345 0.003232800283 -0.003513089546 0.002923781398 0.0001533095628 0.003223809661 -0.003503411633 0.008088734235" qvel="-3.849542664e-08 6.241630571e-05 3.561761676e-07 -4.278438176e-05 1.703598555e-06 -8.290082886e-05 4.174640889e-09 -1.206345894e-08 -4.308116525e-10 -1.269207881e-08 1.31711648e-08 -1.198167993e-08 -1.944035838e-10 -1.227508934e-08 1.245406598e-08 0.002704242905" ctrl="-0.2256707922 -0.7377389329 -0.1670547705 -2.339314878 -0.3491632193 1.508847628 -0.06815612316 0 0 0 0 0 0 0 0" /></keyframe></mujoco>

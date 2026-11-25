@@ -1,0 +1,322 @@
+{
+  "schema_version": "real2sim-semantic-waypoint-source-v1",
+  "request": {
+    "scene_xml_path": "simulation/scene.xml",
+    "output_spec_path": "simulation/trajectory_spec.json",
+    "output_targets_path": "simulation/trajectory_targets.npz",
+    "waypoints": [
+      {
+        "name": "initial",
+        "semantic_kind": "hold",
+        "motion_mode": "dwell",
+        "duration_sec": 0.1,
+        "position_m": [
+          0.27342297103807045,
+          -0.16988209768180693,
+          0.5662956910740584
+        ],
+        "quaternion_xyzw": [
+          0.9815192416812003,
+          -0.13742415356837037,
+          -0.08707939605041984,
+          0.10075593783530855
+        ],
+        "gripper_width_m": 0.085,
+        "requirement_ids": []
+      },
+      {
+        "name": "initial_idle",
+        "semantic_kind": "hold",
+        "motion_mode": "dwell",
+        "duration_sec": 0.43,
+        "position_m": [
+          0.27342297103807045,
+          -0.16988209768180693,
+          0.5662956910740584
+        ],
+        "quaternion_xyzw": [
+          0.9815192416812003,
+          -0.13742415356837037,
+          -0.08707939605041984,
+          0.10075593783530855
+        ],
+        "gripper_width_m": 0.085,
+        "requirement_ids": []
+      },
+      {
+        "name": "prehandle",
+        "semantic_kind": "approach",
+        "motion_mode": "transit",
+        "duration_sec": 3.07,
+        "position_m": [
+          0.535716373868234,
+          0.07329777297400097,
+          0.30007864293417014
+        ],
+        "quaternion_xyzw": [
+          0.8694270951165166,
+          -0.21488350054625333,
+          0.43143139876990677,
+          0.10857511513088874
+        ],
+        "gripper_width_m": 0.07,
+        "requirement_ids": [
+          "approach_handle"
+        ]
+      },
+      {
+        "name": "handle_entry",
+        "semantic_kind": "approach",
+        "motion_mode": "transit",
+        "duration_sec": 1.0,
+        "position_m": [
+          0.600441528909433,
+          0.038870335919929104,
+          0.244496218708695
+        ],
+        "quaternion_xyzw": [
+          0.8694270951165166,
+          -0.21488350054625333,
+          0.43143139876990677,
+          0.10857511513088874
+        ],
+        "gripper_width_m": 0.07,
+        "requirement_ids": [
+          "approach_handle"
+        ]
+      },
+      {
+        "name": "contact_align",
+        "semantic_kind": "approach",
+        "motion_mode": "transit",
+        "duration_sec": 1.8,
+        "position_m": [
+          0.6060698032608416,
+          0.03587664574131416,
+          0.2396629644282189
+        ],
+        "quaternion_xyzw": [
+          0.8694270951165166,
+          -0.21488350054625333,
+          0.43143139876990677,
+          0.10857511513088874
+        ],
+        "gripper_width_m": 0.07,
+        "requirement_ids": [
+          "approach_handle"
+        ]
+      },
+      {
+        "name": "close",
+        "semantic_kind": "grasp",
+        "motion_mode": "dwell",
+        "duration_sec": 0.45,
+        "position_m": [
+          0.6060698032608416,
+          0.03587664574131416,
+          0.2396629644282189
+        ],
+        "quaternion_xyzw": [
+          0.8694270951165166,
+          -0.21488350054625333,
+          0.43143139876990677,
+          0.10857511513088874
+        ],
+        "gripper_width_m": 0.02,
+        "requirement_ids": [
+          "initial_pull"
+        ]
+      },
+      {
+        "name": "pull_mid",
+        "semantic_kind": "transport",
+        "motion_mode": "sustained_contact",
+        "duration_sec": 1.4,
+        "position_m": [
+          0.5640100991073453,
+          0.09512831164287605,
+          0.23474129047925235
+        ],
+        "quaternion_xyzw": [
+          0.8458147363961735,
+          -0.29478276507383716,
+          0.4216549076295182,
+          0.14109462067150885
+        ],
+        "gripper_width_m": 0.02,
+        "requirement_ids": [
+          "initial_pull"
+        ]
+      },
+      {
+        "name": "partial_open",
+        "semantic_kind": "transport",
+        "motion_mode": "sustained_contact",
+        "duration_sec": 1.4,
+        "position_m": [
+          0.5346361907136862,
+          0.15719133814002317,
+          0.23052543756453103
+        ],
+        "quaternion_xyzw": [
+          0.817223724876875,
+          -0.3680629833039157,
+          0.40928591926602875,
+          0.1707631696541997
+        ],
+        "gripper_width_m": 0.02,
+        "requirement_ids": [
+          "initial_pull"
+        ]
+      },
+      {
+        "name": "partial_hold",
+        "semantic_kind": "hold",
+        "motion_mode": "dwell",
+        "duration_sec": 1.45,
+        "position_m": [
+          0.5346361907136862,
+          0.15719133814002317,
+          0.23052543756453103
+        ],
+        "quaternion_xyzw": [
+          0.817223724876875,
+          -0.3680629833039157,
+          0.40928591926602875,
+          0.1707631696541997
+        ],
+        "gripper_width_m": 0.02,
+        "requirement_ids": [
+          "initial_pull"
+        ]
+      },
+      {
+        "name": "release",
+        "semantic_kind": "release",
+        "motion_mode": "transit",
+        "duration_sec": 0.7,
+        "position_m": [
+          0.5156223313862244,
+          0.17750496784323805,
+          0.25175818589714594
+        ],
+        "quaternion_xyzw": [
+          0.817223724876875,
+          -0.3680629833039157,
+          0.40928591926602875,
+          0.1707631696541997
+        ],
+        "gripper_width_m": 0.085,
+        "requirement_ids": [
+          "release"
+        ]
+      },
+      {
+        "name": "withdraw",
+        "semantic_kind": "retreat",
+        "motion_mode": "transit",
+        "duration_sec": 0.4,
+        "position_m": [
+          0.4864347141648245,
+          0.19002279993470875,
+          0.30268461626880816
+        ],
+        "quaternion_xyzw": [
+          0.817223724876875,
+          -0.3680629833039157,
+          0.40928591926602875,
+          0.1707631696541997
+        ],
+        "gripper_width_m": 0.085,
+        "requirement_ids": [
+          "release"
+        ]
+      },
+      {
+        "name": "recontact",
+        "semantic_kind": "hook",
+        "motion_mode": "transit",
+        "duration_sec": 0.7,
+        "position_m": [
+          0.5228326734488228,
+          0.15113670878855454,
+          0.2570390694606597
+        ],
+        "quaternion_xyzw": [
+          0.817223724876875,
+          -0.3680629833039157,
+          0.40928591926602875,
+          0.1707631696541997
+        ],
+        "gripper_width_m": 0.085,
+        "requirement_ids": [
+          "open_wide"
+        ]
+      },
+      {
+        "name": "side_engage",
+        "semantic_kind": "hook",
+        "motion_mode": "sustained_contact",
+        "duration_sec": 1.0,
+        "position_m": [
+          0.5576766651777432,
+          0.18266144932839537,
+          0.2580816500525785
+        ],
+        "quaternion_xyzw": [
+          0.817223724876875,
+          -0.3680629833039157,
+          0.40928591926602875,
+          0.1707631696541997
+        ],
+        "gripper_width_m": 0.085,
+        "requirement_ids": [
+          "open_wide"
+        ]
+      },
+      {
+        "name": "wide_open",
+        "semantic_kind": "hook",
+        "motion_mode": "sustained_contact",
+        "duration_sec": 3.0,
+        "position_m": [
+          0.5534649871008835,
+          0.4032901243391017,
+          0.24950626849292845
+        ],
+        "quaternion_xyzw": [
+          0.6709310439001992,
+          -0.6020794789236865,
+          0.3428070133285868,
+          0.2642634802667695
+        ],
+        "gripper_width_m": 0.085,
+        "requirement_ids": [
+          "open_wide"
+        ]
+      },
+      {
+        "name": "terminal_hold",
+        "semantic_kind": "hold",
+        "motion_mode": "dwell",
+        "duration_sec": 1.1,
+        "position_m": [
+          0.5534649871008835,
+          0.4032901243391017,
+          0.24950626849292845
+        ],
+        "quaternion_xyzw": [
+          0.6709310439001992,
+          -0.6020794789236865,
+          0.3428070133285868,
+          0.2642634802667695
+        ],
+        "gripper_width_m": 0.085,
+        "requirement_ids": [
+          "open_wide"
+        ]
+      }
+    ]
+  },
+  "scene_working_sha256": "5f10b8d17e5815c6217feae324bafd409c46ef9beda37e7219ae76cca0c0fc1d"
+}
