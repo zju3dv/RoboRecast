@@ -1,6 +1,6 @@
 <h1 align="center">RoboRecast: Intent-Preserving Demonstration Augmentation via Diagnosis-Driven Optimization</h1>
 
-<p align="center">Yushi Long<sup>1</sup>, Juzhan Xu<sup>1</sup>, Haibin Huang<sup>3</sup>, Chi Zhang<sup>3</sup>, Yin Chen<sup>3</sup>, Sida Peng<sup>1</sup>, Ruizhen Hu<sup>2,†</sup>, Xiaowei Zhou<sup>1</sup></p>
+<p align="center"><a href="https://autonomierlong.github.io/">Yushi Long</a><sup>1</sup>, <a href="https://juzhan.github.io/">Juzhan Xu</a><sup>1</sup>, <a href="https://brotherhuang.github.io/">Haibin Huang</a><sup>3</sup>, Chi Zhang<sup>3</sup>, Yin Chen<sup>3</sup>, <a href="https://pengsida.net/">Sida Peng</a><sup>1</sup>, <a href="https://csse.szu.edu.cn/staff/ruizhenhu/">Ruizhen Hu</a><sup>2,†</sup>, <a href="https://xzhou.me/">Xiaowei Zhou</a><sup>1</sup></p>
 
 <p align="center">¹ Zhejiang University · ² Shenzhen University · ³ China Telecom<br>† Corresponding author</p>
 
