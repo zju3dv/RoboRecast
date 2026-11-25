@@ -64,7 +64,7 @@ A Robotiq gripper pulls the handle, releases it and engages it again to open the
 ## Citation
 
 ```bibtex
-@misc{long2026roborecastintentpreservingdemonstrationaugmentation,
+@misc{long2026roborecast,
   title={RoboRecast: Intent-Preserving Demonstration Augmentation via Diagnosis-Driven Optimization},
   author={Yushi Long and Juzhan Xu and Haibin Huang and Chi Zhang and Yin Chen and Sida Peng and Ruizhen Hu and Xiaowei Zhou},
   year={2026},
