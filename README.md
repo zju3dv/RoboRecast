@@ -18,7 +18,7 @@ Through diagnosis-driven optimization, RoboRecast augments real-world human and 
 
 - [x] General-purpose skills and tools for the RoboRecast pipeline
 - [x] DROID example for Real2Sim reconstruction and demonstration augmentation
-- [ ] EgoDex example for Human2Robot transfer
+- [x] EgoDex example for Human2Robot transfer
 - [ ] Mobile ALOHA example for wheeled mobile manipulation
 
 ## Method Overview
@@ -83,6 +83,23 @@ Each pair shows the DROID demonstration on the left and its reconstruction on th
 </table>
 
 To run Real2Sim and Augmentation on DROID data, follow the [DROID pipeline guide](pipelines/droid/README.md).
+
+## EgoDex · Human2Robot Transfer
+
+Each comparison shows the human demonstration on the left and the robot simulation on the right.
+
+<table>
+  <tr>
+    <td width="50%" align="center"><strong>Stack Bowls</strong><br><img src="docs/assets/additional/comparisons/stack-bowls.gif" alt="Left and right grippers take turns stacking bowls"></td>
+    <td width="50%" align="center"><strong>Hold a Cup and Tilt a Bottle</strong><br><img src="docs/assets/additional/comparisons/hold-a-cup-and-tilt-a-bottle.gif" alt="One hand holds a cup while the other tilts a bottle"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><strong>Place a Toy in the Drawer</strong><br><img src="docs/assets/additional/comparisons/place-a-toy-in-the-drawer.gif" alt="A gripper opens a drawer, places a toy inside and closes it"></td>
+    <td width="50%" align="center"><strong>Put a Green Block in a Box</strong><br><img src="docs/assets/additional/comparisons/put-a-green-block-in-a-box.gif" alt="A green block is grasped and released inside a box"></td>
+  </tr>
+</table>
+
+To run Human2Robot transfer on EgoDex data, follow the [EgoDex pipeline guide](pipelines/egodex/README.md).
 
 ## Citation
 

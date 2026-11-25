@@ -27,7 +27,7 @@ MODEL=gpt-6-astra
 codex exec --skip-git-repo-check --model "$MODEL" -c 'model_reasoning_effort="medium"' 'Reply with OK.'
 ```
 
-For DROID, append `--model "$MODEL"` to the reconstruction or augmentation command to use your selected model. If your Codex executable is outside `PATH`, also pass `--agent /absolute/path/to/codex`. Both commands use the same login. [DROID pipeline guide](../pipelines/droid/README.md)
+For DROID and EgoDex, append `--model "$MODEL"` to the episode command to use your selected model. If your Codex executable is outside `PATH`, also pass `--agent /absolute/path/to/codex`. Both pipelines use the same login. [DROID pipeline guide](../pipelines/droid/README.md) · [EgoDex pipeline guide](../pipelines/egodex/README.md)
 
 To try another agent subscription or a model API, use the DROID launcher as a reference. It starts the agent in the episode’s output directory, sends the task instructions and paths through standard input, and checks the owner’s verified result when the process exits successfully. A wrapper supplied through `--agent` must accept the launcher's Codex CLI arguments and produce the same run artifacts. [Launcher](../pipelines/droid/run.py) · [Task instructions](../pipelines/droid/owner.md)
 
