@@ -1,0 +1,69 @@
+<mujocoinclude>
+  <asset>
+    <material name="rq_metal" rgba="0.58 0.58 0.58 1" />
+    <material name="rq_silicone" rgba="0.1882 0.1882 0.1882 1" />
+    <material name="rq_gray" rgba="0.4627 0.4627 0.4627 1" />
+    <material name="rq_black" rgba="0.149 0.149 0.149 1" />
+    <mesh class="rq_2f85" file="assets/rq_base_mount.stl" name="rq_base_mount" />
+    <mesh class="rq_2f85" file="assets/robotiq_arg2f_base_link.stl" name="robotiq_arg2f_base_link" />
+    <mesh class="rq_2f85" file="assets/rq_driver.stl" name="rq_driver" />
+    <mesh class="rq_2f85" file="assets/rq_coupler.stl" name="rq_coupler" />
+    <mesh class="rq_2f85" file="assets/rq_follower.stl" name="rq_follower" />
+    <mesh class="rq_2f85" file="assets/rq_pad.stl" name="rq_pad" />
+    <mesh class="rq_2f85" file="assets/rq_silicone_pad.stl" name="rq_silicone_pad" />
+    <mesh class="rq_2f85" file="assets/rq_spring_link.stl" name="rq_spring_link" />
+  </asset>
+  <default>
+    <default class="rq_2f85">
+      <mesh scale="0.001 0.001 0.001" />
+      <general biastype="affine" />
+      <joint axis="1 0 0" />
+      <default class="rq_driver">
+        <joint range="0 0.8" armature="0.005" damping="0.1" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1" />
+      </default>
+      <default class="rq_follower">
+        <joint range="-0.872664 0.872664" armature="0.001" pos="0 -0.018 0.0065" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1" />
+      </default>
+      <default class="rq_spring_link">
+        <joint range="-0.29670597283 0.8" armature="0.001" stiffness="0.05" springref="2.62" damping="0.00125" />
+      </default>
+      <default class="rq_coupler">
+        <joint range="-1.57 0" armature="0.001" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1" />
+      </default>
+      <default class="rq_visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="rq_collision">
+        <geom type="mesh" group="3" />
+        <default class="rq_pad_box1">
+          <geom mass="0" type="box" pos="0 -0.0026 0.034025" size="0.011 0.004 0.015274999999999999" friction="0.7" solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.55 0.55 0.55 1" />
+        </default>
+        <default class="rq_pad_box2">
+          <geom mass="0" type="box" pos="0 -0.0026 0.009375" size="0.011 0.004 0.009375" friction="0.6" solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.45 0.45 0.45 1" />
+        </default>
+      </default>
+    </default>
+  </default>
+  <contact>
+    <exclude body1="robotiq_arg2f_base_link" body2="rq_left_driver" />
+    <exclude body1="robotiq_arg2f_base_link" body2="rq_right_driver" />
+    <exclude body1="robotiq_arg2f_base_link" body2="rq_left_spring_link" />
+    <exclude body1="robotiq_arg2f_base_link" body2="rq_right_spring_link" />
+    <exclude body1="rq_right_coupler" body2="rq_right_follower" />
+    <exclude body1="rq_left_coupler" body2="rq_left_follower" />
+  </contact>
+  <equality>
+    <connect anchor="0 0 0" body1="rq_right_follower" body2="rq_right_coupler" solimp="0.95 0.99 0.001" solref="0.005 1" />
+    <connect anchor="0 0 0" body1="rq_left_follower" body2="rq_left_coupler" solimp="0.95 0.99 0.001" solref="0.005 1" />
+    <joint joint1="right_finger_joint" joint2="left_finger_joint" polycoef="0 1 0 0 0" solimp="0.95 0.99 0.001" solref="0.005 1" />
+  </equality>
+  <tendon>
+    <fixed name="rq_split">
+      <joint joint="right_finger_joint" coef="0.5" />
+      <joint joint="left_finger_joint" coef="0.5" />
+    </fixed>
+  </tendon>
+  <actuator>
+    <general name="gripper_position" tendon="rq_split" biastype="affine" gainprm="100 0 0" biasprm="0 -100 -10" ctrlrange="0 .8" forcerange="-5 5" />
+  </actuator>
+</mujocoinclude>

@@ -21,11 +21,6 @@ def _id(model: mujoco.MjModel, kind: mujoco.mjtObj, name: str, field: str) -> in
                                   field, "A destination name in simulation/name_map.json.", name, None)
     return value
 
-def _contact_count(model: mujoco.MjModel, data: mujoco.MjData,
-                   pair: Tuple[int, int]) -> int:
-    return sum(1 for contact in data.contact[:data.ncon]
-               if {int(contact.geom1), int(contact.geom2)} == set(pair))
-
 def _resolve_contact_groups(model, pattern_a, pattern_b):
     """Resolve stable geom names/globs once, preserving unknown empty groups."""
     import fnmatch
@@ -194,7 +189,7 @@ def _evaluate_success(model: mujoco.MjModel, dense: Dict[str, np.ndarray],
             "status": "PASS" if all(row["passed"] for row in results[:required_count]) else "FAIL",
             "checks": results}
 
-def _required_observables(model: mujoco.MjModel, success_spec: Dict[str, Any]) -> Tuple[Dict[str, int], Dict[Tuple[str, str], Tuple[int, int]]]:
+def _required_observables(model: mujoco.MjModel, success_spec: Dict[str, Any]) -> Tuple[Dict[str, int], Dict[Tuple[str, str], Tuple[frozenset, frozenset]]]:
     bodies, contacts = {}, {}
     for row in success_spec["checks"]:
         if row["type"] in {"body_displacement", "body_inside_geom", "body_supported_by_geom"}:
@@ -204,8 +199,11 @@ def _required_observables(model: mujoco.MjModel, success_spec: Dict[str, Any]) -
                 bodies[body] = _id(model, mujoco.mjtObj.mjOBJ_BODY, body, "$.checks[*].bodies")
         if row["type"] == "contact_samples":
             key = (row["geom_a"], row["geom_b"])
-            contacts[key] = (_id(model, mujoco.mjtObj.mjOBJ_GEOM, key[0], "$.checks[*].geom_a"),
-                             _id(model, mujoco.mjtObj.mjOBJ_GEOM, key[1], "$.checks[*].geom_b"))
+            groups = _resolve_contact_groups(model, *key)
+            if groups is None:
+                raise StructuredToolError("SUCCESS_NAME_MISSING", "Contact check references an empty geom group.",
+                                          "$.checks[*]", "Two matching geom names or patterns", key, None)
+            contacts[key] = groups
         if row["type"] == "body_supported_by_geom":
             body_id = bodies[row["body"]]
             support_id = _id(model, mujoco.mjtObj.mjOBJ_GEOM, row["geom"], "$.checks[*].geom")
@@ -216,7 +214,7 @@ def _required_observables(model: mujoco.MjModel, success_spec: Dict[str, Any]) -
                     ancestor = int(model.body_parentid[ancestor])
                 if ancestor == body_id:
                     member_geoms.add(geom)
-            contacts[("support:" + row["body"], row["geom"])] = (support_id, member_geoms)
+            contacts[("support:" + row["body"], row["geom"])] = (frozenset([support_id]), frozenset(member_geoms))
     return bodies, contacts
 
 def _execute(model: mujoco.MjModel, runtime: Dict[str, Any], expanded: ExpandedTrajectory,
@@ -339,13 +337,8 @@ def _execute(model: mujoco.MjModel, runtime: Dict[str, Any], expanded: ExpandedT
         logs["ee_quaternion_wxyz"].append(data.xquat[runtime_view.end_effector_body_id].copy())
         for name, body_id in bodies.items():
             body_logs[name].append(data.xpos[body_id].copy())
-        for name, pair in contacts.items():
-            if isinstance(pair[1], set):
-                contact_logs[name].append(sum(1 for contact in data.contact[:data.ncon]
-                                              if (int(contact.geom1) == pair[0] and int(contact.geom2) in pair[1]) or
-                                              (int(contact.geom2) == pair[0] and int(contact.geom1) in pair[1])))
-            else:
-                contact_logs[name].append(_contact_count(model, data, pair))
+        for name, groups in contacts.items():
+            contact_logs[name].append(_group_contact_count(data, groups))
         penetrating = [row for row in data.contact[:data.ncon] if row.dist < 0]
         if requirements is not None:
             logs['penetration_m'].append(max((-float(row.dist) for row in penetrating), default=0.))

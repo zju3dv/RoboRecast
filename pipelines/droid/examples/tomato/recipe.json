@@ -1,0 +1,25 @@
+{
+  "episode_id": "REAL+4dbb5646+2023-07-25-14h-46m-02s",
+  "robot": "UR5e",
+  "gripper": "Robotiq 2F-85",
+  "payload": "Replace the tomato with a banana. Use a textured YCB 011 asset if available, otherwise model the curved profile and yellow skin in Blender.",
+  "receptacle": "Replace the steel bowl with a low, teal glazed ceramic bowl with a distinct rim. Keep its outer diameter within about 20 percent of the source.",
+  "layout": "Change the fruit-to-bowl vector visibly in world XY. Aim for at least 8 cm of vector change, and an initial center spacing of 18\u201332 cm. Check edge clearance and reachability.",
+  "interaction": "Grasp the fruit between both pads, lift, carry, release inside the bowl and withdraw while the fruit remains in it.",
+  "layout_check": {
+    "source_observables": {
+      "payload": "physical:fruit_tail_speed",
+      "receptacle": "physical:bowl_tail_speed"
+    },
+    "min_vector_change_m": 0.08,
+    "center_spacing_m": [
+      0.18,
+      0.32
+    ],
+    "min_start_clearance_m": 0.03,
+    "bowl_diameter_ratio": [
+      0.8,
+      1.2
+    ]
+  }
+}

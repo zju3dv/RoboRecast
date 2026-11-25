@@ -14,6 +14,13 @@
 
 Through diagnosis-driven optimization, RoboRecast augments real-world human and robot demonstrations for new layouts, objects, and robots while preserving task intent.
 
+## Code Release Plan
+
+- [x] General-purpose skills and tools for the RoboRecast pipeline
+- [x] DROID example for Real2Sim reconstruction and demonstration augmentation
+- [ ] EgoDex example for Human2Robot transfer
+- [ ] Mobile ALOHA example for wheeled mobile manipulation
+
 ## Method Overview
 
 RoboRecast identifies the contacts and state changes that define task intent in a real demonstration. The agent maps the roles in each interaction to entities in the target configuration, then uses these requirements to initialize the simulated scene and robot trajectory. If a validity check fails or a rollout misses a required interaction, the agent uses visual and numerical feedback to diagnose the cause, revise the relevant scene or motion parameters, and test the revision.
@@ -32,6 +39,8 @@ Open a stage to read its agent skill, or follow a tool link to inspect its imple
 | [Validity checking](.agents/skills/validity-checking/SKILL.md) | Check support, collision geometry, joint travel and robot reachability before rollout. | [Collision overlays, settling and penetration checks, joint sweeps](src/roborecast/inspection.py), [forward kinematics and joint limits](src/roborecast/harness.py) |
 | [Diagnosis-driven optimization](.agents/skills/diagnosis-driven-optimization/SKILL.md) | Find the first failed interaction, adjust the scene or waypoints, and verify the repair. | [Rollout contact and state logs](src/roborecast/rollout.py), [rendered keyframes](src/roborecast/keyframe.py), [scene and waypoint edits](src/roborecast/harness.py), [prefix checkpoints](src/roborecast/checkpoints.py) |
 
+**Agent setup.** We tested RoboRecast with GPT-5.6-Sol, GPT-6.1-Sol, and GPT-6-Astra. To run the pipeline with your own Codex subscription, see [Configure your agent](guides/skills-and-tools.md#configure-your-agent).
+
 **Run a prepared scene.** Follow the [microwave quickstart](examples/microwave/README.md) to reproduce the reference motion, diagnose two failed candidates and verify their repairs.
 
 **Use your own demonstration.** Start with the [tool guide](guides/skills-and-tools.md) for observations, modeling and assembly. The harness reports the candidate’s numerical checks. The main agent compares keyframes with the source to judge visual alignment and whether the action preserves the demonstrated intent. [Instructions for a coding agent](AGENT_TASK.md)
@@ -41,8 +50,6 @@ Open a stage to read its agent skill, or follow a tool link to inspect its imple
 A Robotiq gripper pulls the handle, releases it and engages it again to open the door wider. Compare the source demonstration with the simulated opening.
 
 ![Real demonstration and reference rollout](examples/microwave/media/opening.gif)
-
-[Watch the source and simulation side by side · 18 s](examples/microwave/media/opening.mp4)
 
 **A misplaced hinge axis.** The closed door looks the same with either pivot. Place the axis 15 mm toward the handle and the door rim swings into the fixed bottom trim at 30.7°. At that same angle, restoring the reference axis leaves 7.6 mm between the two collision pieces. The same pull then opens the door to 54.4°.
 
@@ -54,12 +61,28 @@ A Robotiq gripper pulls the handle, releases it and engages it again to open the
 
 [Run the two cases and inspect their reports →](examples/microwave/README.md)
 
-## Code Release Plan
+## DROID · Real2Sim and Augmentation
 
-- [x] General-purpose skills and tools for the RoboRecast pipeline
-- [ ] DROID example for Real2Sim reconstruction and demonstration augmentation
-- [ ] EgoDex example for Human2Robot transfer
-- [ ] Mobile ALOHA example for wheeled mobile manipulation
+From left to right, the DROID demonstration and its FR3 reconstruction show a tomato placed in a steel bowl. In the augmented demonstration, a UR5 places a banana in a teal bowl.
+
+![DROID demonstration with an FR3, FR3 reconstruction, and UR5 banana augmentation, from left to right](docs/assets/additional/comparisons/place-an-object-in-a-bowl.gif)
+
+## DROID · Articulated Examples
+
+Each pair shows the DROID demonstration on the left and its reconstruction on the right.
+
+<table>
+  <tr>
+    <td width="50%" align="center"><strong>Open the microwave</strong><br><img src="docs/assets/additional/comparisons/open-the-microwave.gif" alt="Open the microwave, real demonstration and reconstruction"></td>
+    <td width="50%" align="center"><strong>Open the oven</strong><br><img src="docs/assets/additional/comparisons/open-the-oven.gif" alt="Open the oven, real demonstration and reconstruction"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><strong>Place a screwdriver in the drawer and close it</strong><br><img src="docs/assets/additional/comparisons/place-a-screwdriver-in-the-drawer-and-close-it.gif" alt="Place a screwdriver in the drawer and close it, real demonstration and reconstruction"></td>
+    <td width="50%" align="center"><strong>Rotate the faucet spout</strong><br><img src="docs/assets/additional/comparisons/rotate-the-faucet-spout.gif" alt="Rotate the faucet spout, real demonstration and reconstruction"></td>
+  </tr>
+</table>
+
+To run Real2Sim and Augmentation on DROID data, follow the [DROID pipeline guide](pipelines/droid/README.md).
 
 ## Citation
 

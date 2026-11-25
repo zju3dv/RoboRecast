@@ -16,3 +16,4 @@ runs/
 /examples/microwave/assets/panda.png
 build/
 dist/
+/data/droid/

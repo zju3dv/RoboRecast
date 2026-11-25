@@ -1,4 +1,4 @@
-# Skills and tools
+# Skills and Tools
 
 Skills describe decisions the agent makes. The Python tools and Blender harness produce measurements, scene assets, joint targets and simulation traces. Start with the [microwave quickstart](../examples/microwave/README.md) for installation and a working bundle. A coding agent can start from [AGENT_TASK.md](../AGENT_TASK.md).
 
@@ -9,6 +9,27 @@ Skills describe decisions the agent makes. The Python tools and Blender harness 
 | [Motion initialization and compilation](../.agents/skills/motion-initialization/SKILL.md) | Choose approach and grasp poses, waypoint modes, gripper commands and timing. | [Frame transforms, waypoint compiler](../src/roborecast/harness.py), [quintic interpolation, SLERP, sequential IK](../src/roborecast/motion.py) |
 | [Validity checking](../.agents/skills/validity-checking/SKILL.md) | Check support, collision geometry, joint travel and robot reachability before rollout. | [Collision overlays, settling and penetration checks, joint sweeps](../src/roborecast/inspection.py), [forward kinematics and joint limits](../src/roborecast/harness.py) |
 | [Diagnosis-driven optimization](../.agents/skills/diagnosis-driven-optimization/SKILL.md) | Find the first failed interaction, adjust the scene or waypoints, and verify the repair. | [Rollout contact and state logs](../src/roborecast/rollout.py), [rendered keyframes](../src/roborecast/keyframe.py), [scene and waypoint edits](../src/roborecast/harness.py), [prefix checkpoints](../src/roborecast/checkpoints.py) |
+
+## Configure your agent
+
+Install the Codex CLI on the host where you will run the simulation. Sign in with your own subscription using the same system account that will launch the task. On a server without a browser, use `codex login --device-auth` for the sign-in step. [Codex CLI installation](https://developers.openai.com/codex/cli/)
+
+```sh
+codex --version
+codex login
+codex login status
+```
+
+Choose a model available to your account and check that it answers a short prompt. The DROID launcher defaults to `gpt-6-astra` with medium reasoning effort.
+
+```sh
+MODEL=gpt-6-astra
+codex exec --skip-git-repo-check --model "$MODEL" -c 'model_reasoning_effort="medium"' 'Reply with OK.'
+```
+
+For DROID, append `--model "$MODEL"` to the reconstruction or augmentation command to use your selected model. If your Codex executable is outside `PATH`, also pass `--agent /absolute/path/to/codex`. Both commands use the same login. [DROID pipeline guide](../pipelines/droid/README.md)
+
+To try another agent subscription or a model API, use the DROID launcher as a reference. It starts the agent in the episode’s output directory, sends the task instructions and paths through standard input, and checks the owner’s verified result when the process exits successfully. A wrapper supplied through `--agent` must accept the launcher's Codex CLI arguments and produce the same run artifacts. [Launcher](../pipelines/droid/run.py) · [Task instructions](../pipelines/droid/owner.md)
 
 ## Inputs and outputs
 

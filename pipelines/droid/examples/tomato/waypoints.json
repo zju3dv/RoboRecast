@@ -1,0 +1,278 @@
+{
+  "request": {
+    "waypoints": [
+      {
+        "name": "initial",
+        "position_m": [
+          -0.13399782546605984,
+          0.4919992984124821,
+          0.48800036731899227
+        ],
+        "quaternion_xyzw": [
+          0.9999999999949404,
+          -1.8366059248599492e-06,
+          1.8366059247814445e-06,
+          -1.8365991785729292e-06
+        ],
+        "gripper_width_m": 0.085,
+        "motion_mode": "transit",
+        "duration_sec": 0,
+        "requirement_ids": []
+      },
+      {
+        "name": "approach_above_banana",
+        "position_m": [
+          0.539613753342133,
+          -0.09803542196632717,
+          0.14579401743920514
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.085,
+        "motion_mode": "transit",
+        "duration_sec": 3.5,
+        "requirement_ids": []
+      },
+      {
+        "name": "descend_to_pinch",
+        "position_m": [
+          0.539613753342133,
+          -0.09803542196632717,
+          0.011794017439205138
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.085,
+        "motion_mode": "transit",
+        "duration_sec": 1.2999999999999998,
+        "requirement_ids": []
+      },
+      {
+        "name": "pre_grasp_hold",
+        "position_m": [
+          0.539613753342133,
+          -0.09803542196632717,
+          0.011794017439205138
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.085,
+        "motion_mode": "dwell",
+        "duration_sec": 0.2999999999999998,
+        "requirement_ids": []
+      },
+      {
+        "name": "pinch",
+        "position_m": [
+          0.556613753342133,
+          -0.09801508018929467,
+          0.0348050344463871
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.018,
+        "motion_mode": "sustained_contact",
+        "duration_sec": 0.5,
+        "requirement_ids": [
+          "grasp"
+        ]
+      },
+      {
+        "name": "grasp_hold",
+        "position_m": [
+          0.556613753342133,
+          -0.09801508018929467,
+          0.0348050344463871
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.018,
+        "motion_mode": "dwell",
+        "duration_sec": 0.40000000000000036,
+        "requirement_ids": [
+          "grasp"
+        ]
+      },
+      {
+        "name": "lift_clear",
+        "position_m": [
+          0.556613753342133,
+          -0.09801508018929467,
+          0.1868050344463871
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.018,
+        "motion_mode": "sustained_contact",
+        "duration_sec": 1.0499999999999998,
+        "requirement_ids": [
+          "lift"
+        ]
+      },
+      {
+        "name": "carry_to_bowl",
+        "position_m": [
+          0.6200296094364546,
+          0.13997958490652632,
+          0.1868050344463871
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.018,
+        "motion_mode": "sustained_contact",
+        "duration_sec": 1.5499999999999998,
+        "requirement_ids": [
+          "transport"
+        ]
+      },
+      {
+        "name": "lower_inside_bowl",
+        "position_m": [
+          0.6200296094364546,
+          0.13997958490652632,
+          0.0518050344463871
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.018,
+        "motion_mode": "sustained_contact",
+        "duration_sec": 1.200000000000001,
+        "requirement_ids": [
+          "release"
+        ]
+      },
+      {
+        "name": "pre_release_hold",
+        "position_m": [
+          0.6200296094364546,
+          0.13997958490652632,
+          0.0518050344463871
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.018,
+        "motion_mode": "dwell",
+        "duration_sec": 0.47799999999999976,
+        "requirement_ids": [
+          "release"
+        ]
+      },
+      {
+        "name": "release",
+        "position_m": [
+          0.6200296094364546,
+          0.1399592431294938,
+          0.06579401743920514
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.085,
+        "motion_mode": "sustained_contact",
+        "duration_sec": 0.6219999999999999,
+        "requirement_ids": [
+          "release"
+        ]
+      },
+      {
+        "name": "settle_in_bowl",
+        "position_m": [
+          0.6200296094364546,
+          0.1399592431294938,
+          0.06579401743920514
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.085,
+        "motion_mode": "dwell",
+        "duration_sec": 0.09999999999999964,
+        "requirement_ids": [
+          "release"
+        ]
+      },
+      {
+        "name": "withdraw",
+        "position_m": [
+          0.6200296094364546,
+          0.1399592431294938,
+          0.20579401743920514
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.085,
+        "motion_mode": "transit",
+        "duration_sec": 1.6999999999999993,
+        "requirement_ids": [
+          "withdraw"
+        ]
+      },
+      {
+        "name": "observed_stationary_tail",
+        "position_m": [
+          0.6200296094364546,
+          0.1399592431294938,
+          0.20579401743920514
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper_width_m": 0.085,
+        "motion_mode": "dwell",
+        "duration_sec": 0.7000000000000011,
+        "requirement_ids": [
+          "withdraw"
+        ]
+      }
+    ]
+  }
+}

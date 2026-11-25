@@ -1,0 +1,38 @@
+<mujoco model="robotiq_2f85_harness">
+  <worldbody>
+    <body name="robotiq_arg2f_base_link" gravcomp="1">
+      <inertial pos="0 0 .03145" mass=".22652" diaginertia=".0002 .000178 .000135"/>
+      <geom name="robotiq_base" type="box" pos="0 0 .027" size=".032 .035 .027" rgba=".10 .10 .11 1"/>
+      <body name="right_outer_knuckle" pos="0 .0306011 .054904" gravcomp="1">
+        <joint name="right_finger_joint" axis="1 0 0" range="0 .8" damping=".4" armature=".001"/>
+        <geom name="right_knuckle" type="capsule" fromto="0 0 0 0 .0315 -.0041" size=".007" mass=".025" rgba=".15 .15 .17 1"/>
+        <geom name="right_outer_finger_geom" type="capsule" fromto="0 .0315 -.0041 0 .0376 .043" size=".007" mass=".025" rgba=".12 .12 .13 1"/>
+        <body name="right_inner_finger" pos="0 .0376 .043" gravcomp="1">
+          <joint name="right_inner_joint" axis="1 0 0" range="-.8 0" damping=".25" armature=".0005"/>
+          <geom name="right_inner_finger_geom" type="capsule" fromto="0 0 0 0 -.02202 .03242" size=".006" mass=".015" rgba=".12 .12 .13 1"/>
+          <geom name="right_finger_pad" type="box" pos="0 -.02202034 .03242" size=".011 .003175 .01875" mass=".008" rgba=".22 .22 .23 1" friction="2 .01 .001" solref=".004 1"/>
+        </body>
+      </body>
+      <body name="left_outer_knuckle" pos="0 -.0306011 .054904" euler="0 0 3.141592653589793" gravcomp="1">
+        <joint name="left_finger_joint" axis="1 0 0" range="0 .8" damping=".4" armature=".001"/>
+        <geom name="left_knuckle" type="capsule" fromto="0 0 0 0 .0315 -.0041" size=".007" mass=".025" rgba=".15 .15 .17 1"/>
+        <geom name="left_outer_finger_geom" type="capsule" fromto="0 .0315 -.0041 0 .0376 .043" size=".007" mass=".025" rgba=".12 .12 .13 1"/>
+        <body name="left_inner_finger" pos="0 .0376 .043" gravcomp="1">
+          <joint name="left_inner_joint" axis="1 0 0" range="-.8 0" damping=".25" armature=".0005"/>
+          <geom name="left_inner_finger_geom" type="capsule" fromto="0 0 0 0 -.02202 .03242" size=".006" mass=".015" rgba=".12 .12 .13 1"/>
+          <geom name="left_finger_pad" type="box" pos="0 -.02202034 .03242" size=".011 .003175 .01875" mass=".008" rgba=".22 .22 .23 1" friction="2 .01 .001" solref=".004 1"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <equality>
+    <joint joint1="right_inner_joint" joint2="right_finger_joint" polycoef="0 -1 0 0 0" solref=".004 1"/>
+    <joint joint1="left_inner_joint" joint2="left_finger_joint" polycoef="0 -1 0 0 0" solref=".004 1"/>
+    <joint joint1="left_finger_joint" joint2="right_finger_joint" polycoef="0 1 0 0 0" solref=".004 1"/>
+  </equality>
+  <contact>
+    <exclude body1="robotiq_arg2f_base_link" body2="left_inner_finger"/>
+    <exclude body1="robotiq_arg2f_base_link" body2="right_inner_finger"/>
+    <exclude body1="left_inner_finger" body2="right_inner_finger"/>
+  </contact>
+</mujoco>

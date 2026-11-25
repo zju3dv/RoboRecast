@@ -1,0 +1,142 @@
+{
+  "robot_family": "Universal_Robots_UR5e",
+  "robot_id": "universal_robots_ur5e_robotiq_2f85",
+  "arm_joint_names": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint"
+  ],
+  "arm_position_actuators": [
+    "arm_position_1",
+    "arm_position_2",
+    "arm_position_3",
+    "arm_position_4",
+    "arm_position_5",
+    "arm_position_6"
+  ],
+  "arm_velocity_actuators": [
+    "arm_velocity_1",
+    "arm_velocity_2",
+    "arm_velocity_3",
+    "arm_velocity_4",
+    "arm_velocity_5",
+    "arm_velocity_6"
+  ],
+  "joint_velocity_limits": [
+    3.14,
+    3.14,
+    3.14,
+    3.14,
+    3.14,
+    3.14
+  ],
+  "end_effector_body": "robotiq_arg2f_base_link",
+  "initial_arm_qpos_rad": [
+    -1.5708,
+    -1.5708,
+    1.5708,
+    -1.5708,
+    -1.5708,
+    0.0
+  ],
+  "trajectory_contract": {
+    "gripper_command_unit": "opening_width_m",
+    "joint_position_unit": "radian",
+    "timestamp_unit": "second"
+  },
+  "canonical_grasp_frame": {
+    "reference_body": "robotiq_arg2f_base_link",
+    "tool_site": "ee_site",
+    "T_reference_body_from_canonical_grasp": {
+      "translation_m": [
+        0.0,
+        -1.1102230246251565e-16,
+        0.14594500000000005
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        -7.068953532995776e-23,
+        -7.06895353502525e-23,
+        1.4500296925363314e-22
+      ]
+    },
+    "T_canonical_grasp_from_reference_body": {
+      "translation_m": [
+        -3.1025798998405383e-25,
+        1.1102230277268805e-16,
+        -0.14594500000000005
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        7.068953532995777e-23,
+        7.06895353502525e-23,
+        -1.4500296925363317e-22
+      ]
+    },
+    "T_tool_site_from_canonical_grasp": {
+      "translation_m": [
+        0.0,
+        -1.1102230246251565e-16,
+        0.015945000000000042
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        -7.068953532995776e-23,
+        -7.06895353502525e-23,
+        1.4500296925363314e-22
+      ]
+    },
+    "axes": {
+      "expressed_in": "canonical_grasp",
+      "approach": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "closing": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lateral": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "pads": {
+      "left": {
+        "geom": "left_finger_pad",
+        "position_canonical_grasp_m": [
+          -2.7755575615628914e-17,
+          -0.046700000000000116,
+          -1.1102230246251565e-16
+        ]
+      },
+      "right": {
+        "geom": "right_finger_pad",
+        "position_canonical_grasp_m": [
+          0.0,
+          0.046700000000000165,
+          5.551115123125783e-17
+        ]
+      }
+    },
+    "measurement": {
+      "method": "compiled_mujoco_fk",
+      "scene": "scene.xml",
+      "arm_qpos_rad": [
+        -1.5708,
+        -1.5708,
+        1.5708,
+        -1.5708,
+        -1.5708,
+        0.0
+      ],
+      "gripper_state": "open"
+    }
+  }
+}
