@@ -40,7 +40,7 @@ Open a stage to read its agent skill, or follow a tool link to inspect its imple
 
 A Robotiq gripper pulls the handle, releases it and engages it again to open the door wider. Compare the source demonstration with the simulated opening.
 
-![Real demonstration and reference rollout](examples/microwave/media/opening.jpg)
+![Real demonstration and reference rollout](examples/microwave/media/opening.gif)
 
 [Watch the source and simulation side by side · 18 s](examples/microwave/media/opening.mp4)
 

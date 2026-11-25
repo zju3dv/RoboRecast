@@ -2,7 +2,7 @@
 
 A Franka arm with a Robotiq 2F-85 grasps the handle, pulls, releases and makes contact again to swing the door farther open. The simulation starts from an assembled DROID scene. The same initial state, controller and four interaction requirements are used throughout.
 
-![DROID source and reconstructed opening](media/opening.jpg)
+![DROID source and reconstructed opening](media/opening.gif)
 
 [Watch the source and simulation side by side · 18 s](media/opening.mp4)
 
