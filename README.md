@@ -19,7 +19,7 @@ Through diagnosis-driven optimization, RoboRecast augments real-world human and 
 - [x] General-purpose skills and tools for the RoboRecast pipeline
 - [x] DROID example for Real2Sim reconstruction and demonstration augmentation
 - [x] EgoDex example for Human2Robot transfer
-- [ ] Mobile ALOHA example for wheeled mobile manipulation
+- [x] Mobile ALOHA example for wheeled mobile manipulation
 
 ## Method Overview
 
@@ -100,6 +100,15 @@ Each comparison shows the human demonstration on the left and the robot simulati
 </table>
 
 To run Human2Robot transfer on EgoDex data, follow the [EgoDex pipeline guide](pipelines/egodex/README.md).
+
+## Mobile ALOHA · Wheeled Mobile Manipulation
+
+<p align="center">
+  <strong>Push a Chair</strong><br>
+  <img src="docs/assets/additional/comparisons/push-a-chair.gif" width="720" alt="Real demonstration on the left and the Mobile ALOHA reconstruction on the right: the robot approaches a chair, contacts the backrest and pushes it forward.">
+</p>
+
+To run wheeled mobile manipulation on Mobile ALOHA data, follow the [Mobile ALOHA pipeline guide](pipelines/mobile_aloha/README.md).
 
 ## Citation
 

@@ -82,14 +82,18 @@ if n == 1:
     emit(type="item.completed",item={"type":"mcp_tool_call","status":"completed"})
 if n < 2:
     emit(type="error",message="stream disconnected")
-    time.sleep(.02)
+    log = Path("owner.jsonl" if n == 0 else "owner_2.jsonl")
+    for _ in range(200):
+        if "stream disconnected" in log.read_text(): break
+        time.sleep(.005)
+    time.sleep(.05)
 sys.exit(1)
 """)
             fake.chmod(0o755)
             work = base / "work"
             args = ["run.py", "--episode", str(episode), "--out", str(work), "--task",
                     "place the toy", "--agent", str(fake)]
-            with patch.object(sys, "argv", args), patch("run.time.sleep"), self.assertRaises(SystemExit):
+            with patch.object(sys, "argv", args), patch("roborecast.episode_owner.time.sleep"), self.assertRaises(SystemExit):
                 run.main()
             first, second, third = map(json.loads, (work / "invocations").read_text().splitlines())
             self.assertEqual(first[1], second[1])
